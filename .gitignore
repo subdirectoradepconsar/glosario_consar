@@ -1,17 +1,11 @@
-# Metadatos de MACos
+# Ignorar archivos de metadatos de macOS (AppleDouble)
+**/._*
+
+# Archivos de sistema específicos
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Archivos de iconos y recursos
-Icon?
-._*
-
-# Archivos de miniaturas
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
+# Evitar que se ignoren carpetas reales pero sí sus metadatos internos
+!**/img/
+!**/icons/
