@@ -1,4 +1,18 @@
+:root{
+    --fuente_principal: "Noto Sans", sans-serif;
+    /* Colores primarios */
+    --primario_verde: rgb(39, 199, 39);
+    --primario_azulfuerte: rgb(21, 30, 207);
+    --primario_azulclaro: rgb(0, 162, 255);
+
+
+}
 * {
     padding: 0;
     margin: 0;
+    font-family: var(--fuente_principal);
+}
+
+footer {
+    background-color: gray;
 }
