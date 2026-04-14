@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Glosario CONSAR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1> Panel de Administración - Glosario</h1>
+    <form id="formulario-glosario">
+        <div class="campo">
+            <label for="concepto">Concepto: </label>
+            <input type="text" id="concepto" placeholder="Escribe el concepto ..." required>
+        </div> <br>
+        <div class="campo">
+            <label for="definicion">Definición: </label>
+            <textarea id="definicion" placeholder="Escribe la defición aqui ..."></textarea>
+        </div> <br>
+        <button type="submit" id="btn-guardar"> Guardar Término</button>
+        <button type="button" id="btn-cancelar" onclick="cancelarEdicion()">Cancelar Edicion</button>
+    </form>
+
+    <hr>
+    <div id="contenedor-terminos">
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

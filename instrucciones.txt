@@ -1,0 +1,19 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// Const {} es lo que utilizaremos.
+const firebaseConfig = {
+  apiKey: "AIzaSyCBEcgyGMC_NkSms-NeKq1H0FMpOWYbkQI",
+  authDomain: "diccionario-consar.firebaseapp.com",
+  databaseURL: "https://diccionario-consar-default-rtdb.firebaseio.com",
+  projectId: "diccionario-consar",
+  storageBucket: "diccionario-consar.firebasestorage.app",
+  messagingSenderId: "440062937021",
+  appId: "1:440062937021:web:c78f6309f79c228d12f4d4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
