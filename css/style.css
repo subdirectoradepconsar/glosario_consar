@@ -16,3 +16,28 @@
 footer {
     background-color: gray;
 }
+
+.lista_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+/* Estilo de cada letra */
+.lista_nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #004b40;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.alphabet-list li a:hover {
+    color: #d4af37;
+    border-bottom: 2px solid #d4af37;
+}

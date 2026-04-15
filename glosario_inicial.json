@@ -1,0 +1,1398 @@
+[
+  {
+    "concepto": "Activo financiero",
+    "definicion": "Es un instrumento o bien que representa valor económico y puede generar ganancias, como acciones, bonos o cuentas de ahorro, y forma parte de tu patrimonio."
+  },
+  {
+    "concepto": "Actualización de datos",
+    "definicion": "Proceso mediante el cual se corrige o renueva la información personal del trabajador en su cuenta individual (como domicilio, teléfono o beneficiarios) para mantenerla vigente."
+  },
+  {
+    "concepto": "Adulting",
+    "definicion": "Proceso de asumir responsabilidades propias de la vida adulta, como administrar dinero, pagar gastos y tomar decisiones financieras."
+  },
+  {
+    "concepto": "Afore",
+    "definicion": "Administradora de Fondos para el Retiro. Es la institución financiera que administra tu ahorro para el retiro, invierte tu dinero para hacerlo crecer con el tiempo y te permite dar seguimiento a tu cuenta."
+  },
+  {
+    "concepto": "Afore Niños",
+    "definicion": "Es una cuenta de ahorro para el retiro a nombre de menores de edad que permite comenzar a ahorrar desde temprana edad mientras el dinero se invierte para generar rendimientos."
+  },
+  {
+    "concepto": "Afore receptora",
+    "definicion": "Afore que recibe tu cuenta individual cuando decides cambiarte desde otra administradora."
+  },
+  {
+    "concepto": "Afore Token",
+    "definicion": "Es un código de seguridad que se genera para validar tu identidad en trámites digitales de tu Afore y ayuda a proteger tu cuenta contra accesos no autorizados."
+  },
+  {
+    "concepto": "Afore transferente",
+    "definicion": "Afore de la que proviene tu cuenta individual cuando realizas un cambio hacia otra administradora."
+  },
+  {
+    "concepto": "Afore Web",
+    "definicion": "Es la plataforma en línea de tu Afore donde puedes consultar tu saldo, revisar movimientos y realizar trámites desde cualquier computadora con acceso a internet."
+  },
+  {
+    "concepto": "AforeMóvil",
+    "definicion": "Es la aplicación oficial para celular que te permite administrar tu cuenta Afore, consultar saldo, hacer aportaciones y realizar trámites de forma rápida."
+  },
+  {
+    "concepto": "Agilidad organizacional",
+    "definicion": "Capacidad de una institución para adaptarse rápidamente a cambios, mejorar procesos y responder a las necesidades de las personas usuarias."
+  },
+  {
+    "concepto": "Aguinaldo",
+    "definicion": "Es una prestación laboral que reciben los trabajadores, generalmente a fin de año, y que representa un ingreso adicional al salario."
+  },
+  {
+    "concepto": "Ahorro",
+    "definicion": "Es la parte de tu dinero que decides guardar para el futuro, ya sea para cumplir metas o enfrentar imprevistos."
+  },
+  {
+    "concepto": "Ahorro corto plazo",
+    "definicion": "Dinero que se guarda para cubrir necesidades o metas en un periodo cercano, generalmente menor a un año."
+  },
+  {
+    "concepto": "Ahorro formal",
+    "definicion": "Dinero que se guarda a través de instituciones financieras reguladas, como bancos o Afores, ofreciendo mayor seguridad y beneficios."
+  },
+  {
+    "concepto": "Ahorro informal",
+    "definicion": "Dinero que se guarda fuera del sistema financiero, como en casa o con tandas, sin respaldo ni protección institucional."
+  },
+  {
+    "concepto": "Ahorro largo plazo",
+    "definicion": "Dinero que se destina a metas futuras, como el retiro, y que se mantiene invertido por varios años para generar rendimientos."
+  },
+  {
+    "concepto": "Ahorro Solidario",
+    "definicion": "Aportación voluntaria adicional que realizan los trabajadores del Estado a su cuenta individual en el sistema de pensiones, la cual es complementada por el gobierno."
+  },
+  {
+    "concepto": "Ahorro voluntario",
+    "definicion": "Son aportaciones adicionales al ahorro obligatorio para el retiro que realizas de manera voluntaria en tu cuenta Afore, con el objetivo de incrementar tu ahorro y mejorar el monto de tu pensión futura. También se conoce como ahorro complementario o aportaciones voluntarias."
+  },
+  {
+    "concepto": "Alfabetización digital",
+    "definicion": "Capacidad de las personas para utilizar tecnologías de la información y comunicación de manera efectiva, lo que les permite acceder, comprender y aprovechar servicios financieros digitales."
+  },
+  {
+    "concepto": "Alfabetización Financiera",
+    "definicion": "Es el conjunto de conocimientos y habilidades que te permiten entender y usar mejor el dinero, tomar decisiones informadas y mejorar tu bienestar económico."
+  },
+  {
+    "concepto": "AMAFORE",
+    "definicion": "Asociación Mexicana de Administradoras de Fondos para el Retiro. Es la organización que agrupa a las Afores y promueve el buen funcionamiento del sistema de ahorro para el retiro."
+  },
+  {
+    "concepto": "Analítica de datos",
+    "definicion": "Proceso de recopilación, análisis e interpretación de datos para identificar patrones, tendencias y comportamientos, con el fin de apoyar la toma de decisiones."
+  },
+  {
+    "concepto": "Aportación patrón",
+    "definicion": "Es el dinero que el empleador aporta a tu cuenta Afore como parte de tus prestaciones laborales, con el objetivo de fortalecer tu ahorro para el retiro."
+  },
+  {
+    "concepto": "Aportaciones",
+    "definicion": "Son los depósitos de dinero que se realizan a tu cuenta Afore para incrementar tu ahorro, ya sea por parte del trabajador, el empleador o el gobierno."
+  },
+  {
+    "concepto": "Aportaciones obligatorias",
+    "definicion": "Son las aportaciones que por ley deben realizar el trabajador, el empleador y el gobierno a la cuenta Afore para asegurar el ahorro para el retiro."
+  },
+  {
+    "concepto": "Aportaciones voluntarias",
+    "definicion": "Son los depósitos adicionales que decides hacer a tu cuenta Afore para aumentar tu ahorro y mejorar tu pensión futura. También se conoce como ahorro complementario o ahorro voluntario."
+  },
+  {
+    "concepto": "Aseguradora",
+    "definicion": "Institución financiera que ofrece protección económica mediante seguros ante riesgos como enfermedades, accidentes o fallecimiento."
+  },
+  {
+    "concepto": "Asesor Previsional",
+    "definicion": "Es la persona autorizada que te orienta sobre tu cuenta Afore, te ayuda a realizar trámites y te brinda información para tomar mejores decisiones sobre tu retiro."
+  },
+  {
+    "concepto": "Asignación de Afore",
+    "definicion": "Proceso por el cual una persona es registrada automáticamente en una Afore cuando no elige una por cuenta propia."
+  },
+  {
+    "concepto": "Avalancha",
+    "definicion": "Método para pagar deudas que consiste en liquidar primero aquellas con la tasa de interés más alta, reduciendo el costo total de la deuda."
+  },
+  {
+    "concepto": "Bancarización",
+    "definicion": "Proceso mediante el cual una persona accede y utiliza servicios financieros formales como cuentas, créditos o ahorro en instituciones."
+  },
+  {
+    "concepto": "Base gravable",
+    "definicion": "Monto sobre el cual se calculan los impuestos a pagar."
+  },
+  {
+    "concepto": "Beneficiario Designado",
+    "definicion": "Persona elegida por el titular de una cuenta para recibir los recursos en caso de fallecimiento."
+  },
+  {
+    "concepto": "Beneficiario irrevocable",
+    "definicion": "Persona designada que no puede ser removida como beneficiaria sin su consentimiento."
+  },
+  {
+    "concepto": "Beneficiario Legal",
+    "definicion": "Persona que, conforme a la ley, tiene derecho a recibir los recursos del titular fallecido, aun cuando no haya sido designada previamente."
+  },
+  {
+    "concepto": "Beneficiario Sustituto",
+    "definicion": "Persona que recibe los recursos del titular fallecido en caso de que el beneficiario principal no pueda hacerlo."
+  },
+  {
+    "concepto": "Bienes duraderos",
+    "definicion": "Productos que tienen una vida útil prolongada y pueden utilizarse durante varios años, como electrodomésticos o vehículos."
+  },
+  {
+    "concepto": "Bienestar Financiero",
+    "definicion": "Estado en el que una persona puede cubrir sus necesidades actuales, enfrentar imprevistos y planear su futuro económico con tranquilidad. Integra aspectos como la estabilidad, la salud y la seguridad financiera."
+  },
+  {
+    "concepto": "Big Data",
+    "definicion": "Uso de grandes volúmenes de datos para analizar comportamientos y mejorar la toma de decisiones en servicios financieros."
+  },
+  {
+    "concepto": "Blockchain",
+    "definicion": "Tecnología de registro digital distribuido que permite almacenar información de forma segura, transparente e inalterable, utilizada para registrar transacciones y gestionar activos."
+  },
+  {
+    "concepto": "Bola de nieve",
+    "definicion": "Método para pagar deudas que consiste en liquidar primero las más pequeñas para generar motivación y avanzar progresivamente."
+  },
+  {
+    "concepto": "Boomers",
+    "definicion": "Término demográfico usado para las personas nacidas entre 1946 y 1964. Reconocidos por ser inmigrantes digitales y tener arraigada la cultura del esfuerzo y el sacrificio."
+  },
+  {
+    "concepto": "Brecha de Ahorro",
+    "definicion": "Diferencia entre el dinero que una persona tiene ahorrado y el que necesitará para alcanzar sus metas, especialmente para el retiro."
+  },
+  {
+    "concepto": "Brecha digital",
+    "definicion": "Diferencia en el acceso, uso y habilidades relacionadas con las tecnologías digitales entre distintos grupos de la población, lo que puede limitar su inclusión financiera."
+  },
+  {
+    "concepto": "Buró de crédito",
+    "definicion": "Es una sociedad de información crediticia que registra tu historial de créditos y pagos, lo que permite a las instituciones evaluar tu comportamiento financiero."
+  },
+  {
+    "concepto": "Bursátil",
+    "definicion": "Relacionado con el mercado de valores, donde se compran y venden instrumentos como acciones y bonos."
+  },
+  {
+    "concepto": "Cadena de Valor Financiera",
+    "definicion": "Conjunto de procesos y actividades que realizan las instituciones para ofrecer productos financieros, desde su diseño hasta su uso."
+  },
+  {
+    "concepto": "Calculadoras de Ahorro y Retiro",
+    "definicion": "Son herramientas digitales que te ayudan a estimar cuánto necesitas ahorrar para tu retiro y proyectar el crecimiento de tu dinero con el tiempo."
+  },
+  {
+    "concepto": "Cambio de Afore",
+    "definicion": "Es el proceso mediante el cual decides trasladar tu cuenta individual de una Afore a otra que ofrezca mejores rendimientos o servicios."
+  },
+  {
+    "concepto": "Capacidad de ahorro",
+    "definicion": "Porcentaje del ingreso que una persona puede destinar al ahorro después de cubrir sus gastos."
+  },
+  {
+    "concepto": "Capacidad de endeudamiento",
+    "definicion": "Es el nivel de deuda que puedes asumir sin afectar tu estabilidad financiera, considerando tus ingresos, gastos y obligaciones actuales."
+  },
+  {
+    "concepto": "Capital",
+    "definicion": "Es el dinero o recursos con los que cuentas para ahorrar o invertir, y que pueden generar rendimientos con el tiempo."
+  },
+  {
+    "concepto": "Capital invertido",
+    "definicion": "Dinero que se destina a una inversión con el objetivo de generar rendimientos."
+  },
+  {
+    "concepto": "Capitalización",
+    "definicion": "Es el proceso mediante el cual los intereses generados se suman al capital inicial, permitiendo que el dinero crezca de forma continua."
+  },
+  {
+    "concepto": "Caravana CONSAR",
+    "definicion": "Evento organizado por la CONSAR, en el que brinda información del SAR y la cuenta Afore a través de un módulo de atención al público, así como de pláticas informativas para empresas y dependencias."
+  },
+  {
+    "concepto": "Cartera vencida",
+    "definicion": "Conjunto de créditos que no han sido pagados en el tiempo acordado."
+  },
+  {
+    "concepto": "Cashless",
+    "definicion": "Modelo de pagos sin efectivo, donde las transacciones se realizan de forma digital mediante tarjetas, apps o transferencias."
+  },
+  {
+    "concepto": "CAT",
+    "definicion": "Costo Anual Total. Es un indicador que muestra el costo total de un crédito o financiamiento, incluyendo intereses, comisiones y otros cargos."
+  },
+  {
+    "concepto": "Catálogo de Trámites del SAR",
+    "definicion": "Herramienta de consulta referente a los trámites más comunes de la cuenta individual de Afore, aquí puedes obtener información clara que te facilita la gestión de cada trámite."
+  },
+  {
+    "concepto": "Censo de Educación Financiera",
+    "definicion": "Es un ejercicio que recopila información sobre las acciones y programas de educación financiera impartidos por las Afores para conocer su alcance e impacto en la población mexicana."
+  },
+  {
+    "concepto": "Certificado de Depósito a Término (CDT)",
+    "definicion": "Instrumento de inversión en el que depositas dinero a plazo fijo y recibes intereses al finalizar el periodo."
+  },
+  {
+    "concepto": "CETES",
+    "definicion": "Certificados de la Tesorería de la Federación. Son instrumentos de inversión emitidos por el gobierno que ofrecen rendimientos a corto plazo con bajo riesgo."
+  },
+  {
+    "concepto": "Ciberseguridad",
+    "definicion": "Conjunto de medidas para proteger sistemas, datos y operaciones digitales."
+  },
+  {
+    "concepto": "Ciclo de inversión",
+    "definicion": "Es el periodo en el que una inversión se realiza, genera rendimientos y se recupera el capital, considerando el tiempo y las condiciones del mercado."
+  },
+  {
+    "concepto": "Clonación de tarjetas",
+    "definicion": "Copia ilegal de la información de una tarjeta bancaria para realizar cargos no autorizados."
+  },
+  {
+    "concepto": "CoDi",
+    "definicion": "Plataforma del Banco de México que permite realizar pagos y cobros digitales de forma inmediata mediante el uso de códigos QR o NFC."
+  },
+  {
+    "concepto": "Códigos QR",
+    "definicion": "Código de barras que almacena datos como URL’s, texto o información de contactos, es de fácil y rápido acceso al escanearlos. Asegúrate de que sea confiable."
+  },
+  {
+    "concepto": "Colaboración estratégica",
+    "definicion": "Alianza entre instituciones para desarrollar mejores productos o servicios financieros."
+  },
+  {
+    "concepto": "Colección Mi futuro con $entido",
+    "definicion": "Iniciativa educativa que utiliza infografías para difundir información sobre el SAR y la cuenta afore en el portal La Aventura de mi vida, fomentando una cultura de ahorro, elección, control y planificación financiera para cuando llegue la hora de tu retiro."
+  },
+  {
+    "concepto": "Comisión",
+    "definicion": "Es el monto que cobra una institución financiera por administrar o realizar servicios relacionados con tu dinero o inversiones."
+  },
+  {
+    "concepto": "Comité de Educación Financiera (CEF)",
+    "definicion": "Órgano encargado de coordinar, promover y fortalecer las estrategias de educación financiera en México, a través de la colaboración entre distintas instituciones."
+  },
+  {
+    "concepto": "Comparativo de Afores",
+    "definicion": "Herramienta que permite analizar y contrastar características de distintas Afores, como rendimientos, comisiones y servicios, para tomar una mejor decisión."
+  },
+  {
+    "concepto": "Comportamiento financiero",
+    "definicion": "Forma en que una persona administra su dinero, incluyendo hábitos de gasto, ahorro e inversión."
+  },
+  {
+    "concepto": "Compras de pánico",
+    "definicion": "Adquisición impulsiva y excesiva de bienes o servicios ante situaciones de incertidumbre, miedo o crisis, sin una planeación financiera."
+  },
+  {
+    "concepto": "Concentración de cuentas",
+    "definicion": "Proceso de reunir en una sola cuenta Afore los recursos que una persona tiene dispersos en varias cuentas."
+  },
+  {
+    "concepto": "Condiciones del mercado",
+    "definicion": "Conjunto de factores económicos y financieros (como inflación, tasas de interés y oferta y demanda) que influyen en el comportamiento de consumo, inversiones y productos financieros."
+  },
+  {
+    "concepto": "CONDUSEF",
+    "definicion": "Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros. Es la institución que protege y asesora a las personas en el uso de productos financieros y promueve la educación financiera."
+  },
+  {
+    "concepto": "CONSAR",
+    "definicion": "Comisión Nacional del Sistema de Ahorro para el Retiro. Es la autoridad encargada de regular y supervisar a las Afores y proteger el ahorro para el retiro de los trabajadores."
+  },
+  {
+    "concepto": "CONSARTIPS",
+    "definicion": "Estrategia de contenidos digitales de la CONSAR enfocada en brindar consejos prácticos y recomendaciones sobre el uso de la Afore, el ahorro para el retiro y el Sistema de Ahorro para el Retiro (SAR)."
+  },
+  {
+    "concepto": "Consolidación de deudas",
+    "definicion": "Es el proceso de unir varias deudas en un solo crédito para facilitar su pago y, en algunos casos, reducir intereses."
+  },
+  {
+    "concepto": "Consumismo",
+    "definicion": "Tendencia a adquirir bienes o servicios de manera excesiva o innecesaria."
+  },
+  {
+    "concepto": "Consumo inteligente",
+    "definicion": "Forma consciente de gastar, priorizando necesidades, evitando compras impulsivas y evaluando tus gastos discrecionales (deseos y lujos)."
+  },
+  {
+    "concepto": "Contabilidad mental",
+    "definicion": "Forma en que las personas organizan y clasifican su dinero en diferentes categorías."
+  },
+  {
+    "concepto": "Contactless",
+    "definicion": "Tecnología que permite realizar pagos sin contacto físico, acercando una tarjeta o dispositivo a una terminal."
+  },
+  {
+    "concepto": "Continuación voluntaria",
+    "definicion": "Modalidad que permite a una persona seguir cotizando al sistema de seguridad social por su cuenta, aun cuando ya no tenga una relación laboral activa."
+  },
+  {
+    "concepto": "Control financiero",
+    "definicion": "Capacidad de organizar, planear y supervisar los ingresos, gastos y ahorros para mantener estabilidad económica."
+  },
+  {
+    "concepto": "Costo total del crédito",
+    "definicion": "Monto total que se paga por un crédito, incluyendo intereses, comisiones y otros cargos."
+  },
+  {
+    "concepto": "Coyotes",
+    "definicion": "Personas o intermediarios no autorizados que ofrecen realizar trámites a cambio de dinero, generalmente de forma irregular o fraudulenta."
+  },
+  {
+    "concepto": "Crédito",
+    "definicion": "Cantidad de dinero que una entidad (banco o prestamista) presta con el compromiso de ser devuelta en el futuro, generalmente con intereses y comisiones."
+  },
+  {
+    "concepto": "Créditos Express",
+    "definicion": "Préstamos de aprobación rápida y pocos requisitos, que suelen tener tasas de interés más altas y condiciones menos favorables."
+  },
+  {
+    "concepto": "Créditos Prescriptivos",
+    "definicion": "Créditos otorgados con base en análisis de datos que permiten ofrecer condiciones personalizadas según el perfil del usuario."
+  },
+  {
+    "concepto": "Cuenta Individual",
+    "definicion": "Es la cuenta personal donde se deposita y administra tu ahorro para el retiro en una Afore, incluyendo aportaciones y rendimientos a lo largo del tiempo."
+  },
+  {
+    "concepto": "Cuesta de enero",
+    "definicion": "Es el periodo al inicio del año en el que muchas personas enfrentan dificultades económicas debido a los gastos de fin de año y compromisos financieros acumulados."
+  },
+  {
+    "concepto": "Cultura Organizacional",
+    "definicion": "Conjunto de valores y prácticas que guían el funcionamiento de una institución."
+  },
+  {
+    "concepto": "Cultura Previsional",
+    "definicion": "Es el conjunto de hábitos y conocimientos enfocados en planear el futuro financiero, especialmente el ahorro para el retiro y la toma de decisiones a largo plazo."
+  },
+  {
+    "concepto": "Datos biométricos",
+    "definicion": "Información única de una persona, como huellas o reconocimiento facial, utilizada para verificar su identidad."
+  },
+  {
+    "concepto": "Datos fiscales",
+    "definicion": "Información personal registrada ante el SAT (como RFC y domicilio fiscal) necesaria para trámites financieros y administrativos."
+  },
+  {
+    "concepto": "Débito",
+    "definicion": "Dinero disponible en una cuenta bancaria para cubrir pagos o transacciones, evitando deudas debido a que las transacciones solo se realizan si se cuenta con el saldo suficiente."
+  },
+  {
+    "concepto": "Décimo Transitorio",
+    "definicion": "Disposición legal aplicable a trabajadores que comenzaron a cotizar antes de la reforma de 1997 del sistema de pensiones, permitiéndoles elegir entre el régimen anterior o el actual."
+  },
+  {
+    "concepto": "Deducible",
+    "definicion": "Monto que el asegurado paga de su bolsillo al ocurrir un siniestro, antes de que la aseguradora cubra el resto de los gastos."
+  },
+  {
+    "concepto": "Democratización Financiera",
+    "definicion": "Acceso equitativo de todas las personas a productos y servicios financieros, sin importar su nivel de ingresos o ubicación."
+  },
+  {
+    "concepto": "Densidad de cotización",
+    "definicion": "Proporción del tiempo que una persona ha cotizado al sistema de seguridad social respecto al tiempo que ha estado en edad laboral."
+  },
+  {
+    "concepto": "Derechohabiente",
+    "definicion": "Persona que tiene derecho a recibir servicios o prestaciones de una institución de seguridad social, como el IMSS o ISSSTE."
+  },
+  {
+    "concepto": "Descuento hiperbólico",
+    "definicion": "Preferencia por recompensas pequeñas pero inmediatas sobre beneficios mayores en el futuro."
+  },
+  {
+    "concepto": "Desempleo",
+    "definicion": "Situación en la que una persona en edad y disposición de trabajar no tiene empleo por diferentes circunstancias."
+  },
+  {
+    "concepto": "Deuda",
+    "definicion": "Obligación de pago adquirida al recibir dinero, bienes o servicios con el compromiso de devolverlos en el futuro, generalmente con un plazo establecido e intereses."
+  },
+  {
+    "concepto": "Devaluación",
+    "definicion": "Pérdida del valor de una moneda frente a otras, lo que reduce su poder de compra."
+  },
+  {
+    "concepto": "Diagnóstico financiero",
+    "definicion": "Evaluación de la situación económica personal para identificar fortalezas y áreas de mejora."
+  },
+  {
+    "concepto": "Digitalización financiera",
+    "definicion": "Proceso mediante el cual los servicios financieros se transforman a través de tecnologías digitales, facilitando su acceso, uso y gestión a través de plataformas electrónicas."
+  },
+  {
+    "concepto": "Dinero",
+    "definicion": "Medio de intercambio aceptado universalmente para adquirir bienes y servicios, que también funciona como unidad de cuenta y reserva de valor."
+  },
+  {
+    "concepto": "Dispersión de recursos",
+    "definicion": "Proceso mediante el cual se distribuyen recursos económicos a las cuentas individuales."
+  },
+  {
+    "concepto": "Diversificación de inversiones",
+    "definicion": "Estrategia que consiste en distribuir el dinero en diferentes instrumentos financieros para reducir riesgos."
+  },
+  {
+    "concepto": "Dividendos",
+    "definicion": "Ganancias que una empresa reparte a sus accionistas como resultado de sus utilidades."
+  },
+  {
+    "concepto": "E-commerce",
+    "definicion": "Compra y venta de productos o servicios a través de internet."
+  },
+  {
+    "concepto": "EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization)",
+    "definicion": "Indicador financiero que mide la rentabilidad de una empresa antes de ciertos gastos, útil para evaluar su desempeño operativo."
+  },
+  {
+    "concepto": "Economía plateada",
+    "definicion": "Conjunto de actividades económicas, productos y servicios dirigidos a atender las necesidades de las personas mayores, incluyendo soluciones financieras para el retiro y la seguridad económica."
+  },
+  {
+    "concepto": "Ecosistema Financiero",
+    "definicion": "Conjunto de entidades financieras, tecnologías, marcos regulatorios y clientes que interactúan en el mercado financiero."
+  },
+  {
+    "concepto": "Ecosistema financiero inclusivo",
+    "definicion": "Conjunto de instituciones, tecnologías y actores que interactúan para ofrecer servicios financieros accesibles a toda la población, especialmente a los grupos tradicionalmente excluidos."
+  },
+  {
+    "concepto": "Edad de retiro",
+    "definicion": "Edad establecida para que una persona pueda acceder a su pensión o recursos acumulados para el retiro. Generalmente, entre los 60 y 65 años o cuando cumpla los requisitos para pensionarse."
+  },
+  {
+    "concepto": "Edad legal de retiro",
+    "definicion": "Edad establecida por la ley a partir de la cual una persona puede acceder a una pensión por retiro."
+  },
+  {
+    "concepto": "Educación Financiera",
+    "definicion": "Proceso de aprendizaje que permite entender cómo administrar el dinero y tomar mejores decisiones económicas."
+  },
+  {
+    "concepto": "Educación previsional",
+    "definicion": "Conjunto de conocimientos y herramientas que ayudan a las personas a planear y asegurar su bienestar financiero en la etapa de retiro."
+  },
+  {
+    "concepto": "EDUSAR",
+    "definicion": "Estrategia de la CONSAR para crear y difundir contenido educativo digital en redes sociales, bajo la línea #EduSAR, con el objetivo de promover el ahorro para el retiro y fortalecer la educación financiera y previsional."
+  },
+  {
+    "concepto": "Efecto manada",
+    "definicion": "Tendencia a imitar las decisiones financieras de otras personas."
+  },
+  {
+    "concepto": "Egresos",
+    "definicion": "Dinero que una persona gasta o destina al pago de bienes y servicios."
+  },
+  {
+    "concepto": "Empleador",
+    "definicion": "Persona o empresa que contrata a trabajadores y realiza aportaciones a su Afore."
+  },
+  {
+    "concepto": "Emprendimiento",
+    "definicion": "Proceso de crear, desarrollar y gestionar un negocio o proyecto propio, asumiendo riesgos con el objetivo de generar ingresos y crecimiento económico."
+  },
+  {
+    "concepto": "Empresa operadora",
+    "definicion": "Entidad jurídica encargada de las actividades cotidianas de un negocio, produciendo bienes o servicios. Se centra principalmente en generar ingresos, gestionar las operaciones y competir en su sector."
+  },
+  {
+    "concepto": "Eneagrama financiero",
+    "definicion": "Herramienta que relaciona la personalidad con la forma en que una persona maneja su dinero."
+  },
+  {
+    "concepto": "ENIF",
+    "definicion": "Encuesta Nacional de Inclusión Financiera. Mide el acceso y uso de servicios financieros en México."
+  },
+  {
+    "concepto": "Enlace malicioso",
+    "definicion": "Vínculo diseñado para robar información o instalar software dañino. Pueden ser links que llegan por correo, SMS, WhatsApp, publicaciones en redes sociales, supuestas páginas web y códigos QR."
+  },
+  {
+    "concepto": "Entidades financieras",
+    "definicion": "Instituciones autorizadas que ofrecen productos y servicios financieros, como bancos, aseguradoras, Afores o casas de bolsa."
+  },
+  {
+    "concepto": "Estado de Cuenta",
+    "definicion": "Documento que muestra el resumen de movimientos, saldos y operaciones realizadas en una cuenta durante un periodo determinado."
+  },
+  {
+    "concepto": "Estafa",
+    "definicion": "Engaño o fraude mediante el cual una persona obtiene dinero, bienes o información confidencial de otra de forma ilícita."
+  },
+  {
+    "concepto": "Estafa en línea",
+    "definicion": "Fraude realizado a través de internet, como sitios o mensajes falsos."
+  },
+  {
+    "concepto": "Estafa telefónica",
+    "definicion": "Engaño realizado mediante llamadas para obtener dinero o datos personales."
+  },
+  {
+    "concepto": "Estrategia de retiro",
+    "definicion": "Plan para administrar los recursos ahorrados y asegurar ingresos durante la etapa de retiro."
+  },
+  {
+    "concepto": "Estrategia financiera",
+    "definicion": "Plan organizado para administrar ingresos, gastos, ahorro e inversión con el fin de alcanzar objetivos económicos."
+  },
+  {
+    "concepto": "Estrés financiero",
+    "definicion": "Situación de preocupación o presión causada por dificultades económicas, como deudas, falta de ingresos o gastos imprevistos."
+  },
+  {
+    "concepto": "Evaluación de Madurez Digital",
+    "definicion": "Análisis del nivel de adopción de tecnologías digitales en una institución."
+  },
+  {
+    "concepto": "Expectativa de vida",
+    "definicion": "Promedio de años que se espera que viva una persona, utilizado para planear el ahorro para el retiro."
+  },
+  {
+    "concepto": "Expediente de Identificación",
+    "definicion": "Conjunto de documentos y datos personales que permiten validar la identidad de una persona para realizar trámites financieros."
+  },
+  {
+    "concepto": "Expediente Electrónico Único",
+    "definicion": "Archivo digital que concentra la información y documentos de un trabajador en el sistema de ahorro para el retiro, facilitando la gestión de su cuenta."
+  },
+  {
+    "concepto": "Fecha de corte (TC)",
+    "definicion": "Día en que se cierra el periodo de registro de operaciones de una tarjeta de crédito, determinando el saldo a pagar."
+  },
+  {
+    "concepto": "Fecha de pago (TC)",
+    "definicion": "Día límite para liquidar el saldo de la tarjeta de crédito sin generar intereses adicionales."
+  },
+  {
+    "concepto": "Feria de Afores",
+    "definicion": "Evento gratuito en el que puedes recibir orientación personalizada, resolver dudas y realizar trámites referentes a tu ahorro para el retiro."
+  },
+  {
+    "concepto": "Finanzas personales",
+    "definicion": "Conjunto de decisiones y acciones relacionadas con la administración del dinero de una persona, incluyendo ingresos, gastos, ahorro, inversión y planificación para alcanzar metas financieras."
+  },
+  {
+    "concepto": "Finanzas Sustentables",
+    "definicion": "Es la gestión del dinero considerando el impacto ambiental y social, buscando que las decisiones financieras contribuyan al bienestar a largo plazo."
+  },
+  {
+    "concepto": "FONACOT",
+    "definicion": "Instituto del Fondo Nacional para el Consumo de los Trabajadores. Es una institución que otorga créditos a trabajadores formales para adquirir bienes y servicios en condiciones accesibles."
+  },
+  {
+    "concepto": "Fondo de emergencia",
+    "definicion": "Es un ahorro destinado a cubrir imprevistos, como gastos médicos o pérdida de ingresos, que te ayuda a evitar endeudarte en situaciones inesperadas."
+  },
+  {
+    "concepto": "Fondo de Pensiones para el Bienestar",
+    "definicion": "Es un fondo creado por el gobierno para complementar las pensiones de los trabajadores, con el objetivo de mejorar los ingresos durante el retiro."
+  },
+  {
+    "concepto": "Fondos indexados",
+    "definicion": "Fondos de inversión que replican el comportamiento de un índice financiero, como el IPC, con el objetivo de obtener rendimientos similares al mercado."
+  },
+  {
+    "concepto": "FOVISSSTE",
+    "definicion": "Fondo de la Vivienda del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado. Es un organismo que otorga créditos para vivienda a trabajadores del Estado."
+  },
+  {
+    "concepto": "Fraudes",
+    "definicion": "Son acciones engañosas para obtener dinero o información de manera ilegal, afectando a personas o instituciones financieras."
+  },
+  {
+    "concepto": "Freelancer (Freelance)",
+    "definicion": "Es una persona que trabaja de forma independiente, ofreciendo sus servicios a distintos clientes sin tener una relación laboral fija."
+  },
+  {
+    "concepto": "GanAhorro",
+    "definicion": "Es un programa que promueve el ahorro voluntario ofreciendo beneficios o incentivos al realizar aportaciones a tu cuenta Afore."
+  },
+  {
+    "concepto": "Gasto",
+    "definicion": "Es el dinero que utilizas para pagar bienes o servicios, ya sea para cubrir necesidades básicas o deseos personales."
+  },
+  {
+    "concepto": "Gastos Hormiga",
+    "definicion": "Son pequeños gastos cotidianos que parecen insignificantes, pero que al acumularse pueden afectar tu economía sin que lo notes."
+  },
+  {
+    "concepto": "Generación Afore",
+    "definicion": "Personas que cotizan bajo el sistema de cuentas individuales vigente desde 1997."
+  },
+  {
+    "concepto": "Global Money Week",
+    "definicion": "Es una campaña internacional que promueve la educación financiera en niñas, niños y jóvenes, fomentando hábitos responsables en el manejo del dinero."
+  },
+  {
+    "concepto": "GloSARio",
+    "definicion": "Herramienta de la CONSAR que compila y explica conceptos de educación financiera y del Sistema de Ahorro para el Retiro, con el objetivo de acercar estos temas a la población de forma clara y accesible."
+  },
+  {
+    "concepto": "Guía previsional - Mujer",
+    "definicion": "Material infográfico con perspectiva de género cuyo objetivo es fortalecer las capacidades económico-financieras con procesos de autoaprendizaje, independientemente de la edad, condición socioeconómica, profesión u oficio."
+  },
+  {
+    "concepto": "Guías previsionales",
+    "definicion": "Materiales informativos que orientan sobre el ahorro y la planeación para el retiro."
+  },
+  {
+    "concepto": "Habilidades financieras",
+    "definicion": "Capacidades que permiten gestionar mejor el dinero y tomar decisiones financieras."
+  },
+  {
+    "concepto": "Hábitos financieros",
+    "definicion": "Conductas recurrentes relacionadas con el manejo del dinero, como ahorrar, gastar o invertir, que influyen en la estabilidad económica de una persona."
+  },
+  {
+    "concepto": "Heurísticos",
+    "definicion": "Atajos mentales que usamos para tomar decisiones rápidas, que pueden influir en nuestras finanzas."
+  },
+  {
+    "concepto": "Hiperconsumo",
+    "definicion": "Consumo excesivo de bienes y servicios más allá de las necesidades reales."
+  },
+  {
+    "concepto": "Historial crediticio",
+    "definicion": "Registro del comportamiento de pago de una persona respecto a sus créditos, utilizado por las instituciones financieras para evaluar su capacidad de pago."
+  },
+  {
+    "concepto": "Homologación de datos",
+    "definicion": "Actualización y unificación de datos personales para que coincidan en todas las instituciones relacionadas con la cuenta Afore."
+  },
+  {
+    "concepto": "Horizonte temporal",
+    "definicion": "Periodo de tiempo durante el cual se planea mantener una inversión."
+  },
+  {
+    "concepto": "Identidad digital",
+    "definicion": "Conjunto de datos e información electrónica que permite identificar a una persona en entornos digitales, necesaria para acceder a servicios financieros en línea de forma segura."
+  },
+  {
+    "concepto": "Identidad financiera digital",
+    "definicion": "Conjunto de datos que identifican a una persona en servicios financieros digitales."
+  },
+  {
+    "concepto": "IDEO",
+    "definicion": "Indicador de desempeño operativo. Medida que evalúa la eficiencia y calidad de los servicios que ofrecen las Afores."
+  },
+  {
+    "concepto": "Imprevisto económico",
+    "definicion": "Gasto o situación financiera no planeada que afecta el presupuesto, como una emergencia médica o reparación urgente."
+  },
+  {
+    "concepto": "Impuestos",
+    "definicion": "Pagos obligatorios que las personas y empresas realizan al gobierno."
+  },
+  {
+    "concepto": "IMSS",
+    "definicion": "Instituto Mexicano del Seguro Social. Institución de seguridad social en México que brinda servicios de salud y prestaciones, incluyendo pensiones, a los trabajadores del sector formal."
+  },
+  {
+    "concepto": "Incertidumbre financiera",
+    "definicion": "Situación en la que no se tiene claridad sobre los ingresos, gastos o condiciones económicas futuras, a nivel personal o global, lo que dificulta la toma de decisiones."
+  },
+  {
+    "concepto": "Inclusión Financiera",
+    "definicion": "Proceso que busca asegurar el acceso a servicios financieros útiles y asequibles para todos los sectores de la población, especialmente los vulnerables, para mejorar su calidad de vida."
+  },
+  {
+    "concepto": "Incremento de semanas cotizadas",
+    "definicion": "Aumento en el número de semanas registradas de aportación al sistema de seguridad social, lo cual impacta en el acceso y monto de la pensión."
+  },
+  {
+    "concepto": "Independencia financiera",
+    "definicion": "Estado en el que una persona puede cubrir sus gastos y mantener su estilo de vida sin depender de ingresos activos constantes."
+  },
+  {
+    "concepto": "INEGI",
+    "definicion": "Instituto Nacional de Estadística y Geografía. Es el organismo que recopila y publica información sobre la población, economía y territorio del país para apoyar la toma de decisiones."
+  },
+  {
+    "concepto": "Inflación",
+    "definicion": "Es el aumento generalizado de los precios de bienes y servicios con el tiempo, lo que reduce el poder adquisitivo de tu dinero."
+  },
+  {
+    "concepto": "INFONAVIT",
+    "definicion": "Instituto del Fondo Nacional de la Vivienda para los Trabajadores. Es una institución que otorga créditos para vivienda a trabajadores del sector privado."
+  },
+  {
+    "concepto": "Información biométrica",
+    "definicion": "Son datos únicos de una persona, como huellas dactilares o reconocimiento facial, que se utilizan para verificar su identidad en trámites y servicios financieros."
+  },
+  {
+    "concepto": "INFOSAR",
+    "definicion": "Línea de contenido digital de la CONSAR que presenta información relevante sobre el SAR, la cuenta Afore y temas de retiro, a través de publicaciones breves y accesibles en redes sociales."
+  },
+  {
+    "concepto": "Ingreso activo",
+    "definicion": "Es el dinero que obtienes a cambio de tu trabajo o servicios, como un sueldo u honorarios, y que depende de tu actividad laboral."
+  },
+  {
+    "concepto": "Ingreso Bruto",
+    "definicion": "Cantidad de dinero que recibe una persona o empresa antes de la deducción de impuestos, costos, seguridad social u otros gastos definidos en contratos."
+  },
+  {
+    "concepto": "Ingreso neto",
+    "definicion": "Cantidad de dinero que una persona o empresa recibe después de impuestos y deducciones."
+  },
+  {
+    "concepto": "Ingreso pasivo",
+    "definicion": "Es el dinero que recibes de forma constante sin trabajar activamente, como rentas, intereses o ganancias de inversiones."
+  },
+  {
+    "concepto": "Ingresos",
+    "definicion": "Es el dinero que recibes de distintas fuentes, como salario, negocios o inversiones, y que forma parte de tu economía personal."
+  },
+  {
+    "concepto": "Ingresos acumulables",
+    "definicion": "Suma de ingresos en efectivo, bienes, servicios, crédito, etc. que aumentan el patrimonio de una persona física o moral y que se deben considerar para el cálculo del ISR."
+  },
+  {
+    "concepto": "Innovación digital",
+    "definicion": "Aplicación de nuevas tecnologías y herramientas digitales para mejorar procesos, productos y servicios, especialmente en el sector financiero."
+  },
+  {
+    "concepto": "Innovación financiera",
+    "definicion": "Desarrollo e implementación de nuevos productos, servicios o modelos en el sector financiero que buscan mejorar la experiencia del usuario y ampliar el acceso a servicios."
+  },
+  {
+    "concepto": "Institución Financiera",
+    "definicion": "Es una entidad que ofrece servicios relacionados con el manejo del dinero, como ahorro, crédito o inversión, incluyendo bancos, Afores y aseguradoras."
+  },
+  {
+    "concepto": "Instrumentos de inversión",
+    "definicion": "Opciones disponibles para hacer crecer el dinero, como acciones, bonos, fondos de inversión o CETES, cada uno con distintos niveles de riesgo y rendimiento."
+  },
+  {
+    "concepto": "Inteligencia Artificial (IA)",
+    "definicion": "Rama de la informática que desarrolla sistemas capaces de realizar tareas que normalmente requieren inteligencia humana, como aprender, analizar información y tomar decisiones."
+  },
+  {
+    "concepto": "Interés compuesto",
+    "definicion": "Interés que se genera no solo sobre el capital inicial, sino también sobre los intereses acumulados, potenciando el crecimiento del dinero con el tiempo."
+  },
+  {
+    "concepto": "Interés moratorio",
+    "definicion": "Interés adicional que se cobra cuando no se realiza un pago en la fecha acordada, como en créditos o tarjetas."
+  },
+  {
+    "concepto": "Interés simple",
+    "definicion": "Es el interés que se calcula únicamente sobre el monto inicial, sin considerar los intereses generados previamente durante el periodo."
+  },
+  {
+    "concepto": "Intereses",
+    "definicion": "Es el dinero que se gana al ahorrar o invertir, o el costo que se paga por utilizar un crédito o préstamo."
+  },
+  {
+    "concepto": "Internet de las Cosas (IoT)",
+    "definicion": "Red de dispositivos físicos de uso cotidiano conectados a internet que recopilan e intercambian datos, permitiendo automatizar procesos y mejorar la interacción entre el mundo físico y digital."
+  },
+  {
+    "concepto": "Interoperabilidad financiera",
+    "definicion": "Capacidad de diferentes entidades financieras para conectarse, compartir información y fondos en tiempo real."
+  },
+  {
+    "concepto": "Inversión",
+    "definicion": "Es destinar dinero a instrumentos financieros con el objetivo de generar ganancias a futuro, asumiendo cierto nivel de riesgo."
+  },
+  {
+    "concepto": "Inversión activa",
+    "definicion": "Estrategia de inversión que busca superar el rendimiento del mercado mediante decisiones de compra y venta."
+  },
+  {
+    "concepto": "Inversión pasiva",
+    "definicion": "Estrategia de inversión que busca replicar el comportamiento de un índice de mercado."
+  },
+  {
+    "concepto": "Inversiones sostenibles",
+    "definicion": "Inversiones que consideran factores ambientales, sociales y de gobierno para generar impacto positivo."
+  },
+  {
+    "concepto": "IRN",
+    "definicion": "Indicador de Rendimiento Neto. Es una medida que muestra las ganancias que generan las Afores, considerando las comisiones que cobran."
+  },
+  {
+    "concepto": "ISR",
+    "definicion": "Impuesto Sobre la Renta. Impuesto que se aplica a las ganancias obtenidas siendo persona física o moral."
+  },
+  {
+    "concepto": "ISSSTE",
+    "definicion": "Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado. Es la institución que brinda servicios de salud, prestaciones y ahorro para el retiro a trabajadores del gobierno."
+  },
+  {
+    "concepto": "Jubilación",
+    "definicion": "Es la etapa en la que una persona deja de trabajar y comienza a recibir ingresos a través de una pensión o de su ahorro acumulado."
+  },
+  {
+    "concepto": "Laboratorio del mañana",
+    "definicion": ""
+  },
+  {
+    "concepto": "Ley 73",
+    "definicion": "Régimen de pensiones aplicable a trabajadores que comenzaron a cotizar antes del 1 de julio de 1997, basado en semanas cotizadas y salario promedio."
+  },
+  {
+    "concepto": "Ley 97",
+    "definicion": "Régimen de pensiones vigente para quienes comenzaron a cotizar a partir del 1 de julio de 1997, basado en cuentas individuales administradas por Afores."
+  },
+  {
+    "concepto": "Ley del Seguro Social",
+    "definicion": "Normativa que regula los derechos y obligaciones en materia de seguridad social en México."
+  },
+  {
+    "concepto": "Ley ISSSTE",
+    "definicion": "Ley que regula las prestaciones de seguridad social para trabajadores del Estado."
+  },
+  {
+    "concepto": "Ley SAR",
+    "definicion": "Marco legal que regula el Sistema de Ahorro para el Retiro."
+  },
+  {
+    "concepto": "Libertad Financiera",
+    "definicion": "Capacidad de cubrir necesidades y metas sin depender de un ingreso fijo o constante."
+  },
+  {
+    "concepto": "Límite de crédito",
+    "definicion": "Monto máximo que una institución financiera autoriza para utilizar en una línea de crédito."
+  },
+  {
+    "concepto": "Línea de crédito",
+    "definicion": "Monto máximo de dinero que una institución financiera pone a disposición de una persona para usar según sus necesidades."
+  },
+  {
+    "concepto": "Liquidez",
+    "definicion": "Facilidad con la que un activo puede convertirse en dinero sin perder su valor."
+  },
+  {
+    "concepto": "Localización cuenta afore",
+    "definicion": "Proceso para identificar en qué Afore se encuentra registrada una cuenta individual."
+  },
+  {
+    "concepto": "Mercado Financiero",
+    "definicion": "Espacio físico o virtual donde se compran y venden instrumentos financieros para generar rendimientos."
+  },
+  {
+    "concepto": "Meses sin intereses",
+    "definicion": "Modalidad de pago que permite dividir una compra en parcialidades sin generar intereses, siempre que se cumplan las condiciones."
+  },
+  {
+    "concepto": "Metas financieras",
+    "definicion": "Objetivos económicos que una persona establece, como ahorrar, invertir o pagar deudas."
+  },
+  {
+    "concepto": "Metodologías ágiles",
+    "definicion": "Enfoques de trabajo flexibles que permiten desarrollar proyectos de manera iterativa, facilitando la adaptación a cambios y la mejora continua."
+  },
+  {
+    "concepto": "Mi Futuro con $entido",
+    "definicion": "Colección de materiales gráficos de la CONSAR que, a través de infografías temáticas, explica el Sistema de Ahorro para el Retiro y promueve la toma de decisiones informadas sobre la cuenta Afore."
+  },
+  {
+    "concepto": "Mi Primer Afore",
+    "definicion": "Programa educativo de la CONSAR e IMJUVE dirigido a jóvenes de 12 a 29 años, que promueve el ahorro para el retiro y el conocimiento del sistema Afore desde edades tempranas."
+  },
+  {
+    "concepto": "Microemprendedores",
+    "definicion": "Personas que desarrollan actividades económicas a pequeña escala, generalmente con recursos limitados, y que pueden beneficiarse del acceso a servicios financieros."
+  },
+  {
+    "concepto": "Millenial/Gen Z",
+    "definicion": "Generaciones de personas con características y hábitos financieros distintos, especialmente en el uso de tecnología."
+  },
+  {
+    "concepto": "Minusvalía",
+    "definicion": "Disminución temporal en el valor de una inversión debido a condiciones del mercado."
+  },
+  {
+    "concepto": "Modalidad 10",
+    "definicion": "Esquema de incorporación voluntaria al IMSS para trabajadores independientes que desean cotizar para acceder a servicios y prestaciones."
+  },
+  {
+    "concepto": "Modalidad 40",
+    "definicion": "Esquema que permite a trabajadores continuar cotizando al IMSS con un salario elegido, para mejorar el monto de su pensión."
+  },
+  {
+    "concepto": "Modelo “as a service”",
+    "definicion": "Modelo de negocio que ofrece servicios a través de internet bajo demanda, sin necesidad de adquirir infraestructura propia, común en soluciones tecnológicas y financieras."
+  },
+  {
+    "concepto": "Módulo: La aventura de mi vida",
+    "definicion": "Módulo web de educación financiera y previsional diseñado por la CONSAR para fomentar hábitos de ahorro y planificación financiera según el rango de edad."
+  },
+  {
+    "concepto": "Monitor Afore",
+    "definicion": "Herramienta que permite consultar y comparar el desempeño de las Afores, como rendimientos y comisiones."
+  },
+  {
+    "concepto": "Negativa de pensión",
+    "definicion": "Resolución emitida cuando una persona no cumple con los requisitos necesarios para obtener una pensión."
+  },
+  {
+    "concepto": "Neurofinanzas",
+    "definicion": "Estudio de cómo las emociones influyen en las decisiones financieras."
+  },
+  {
+    "concepto": "NFC",
+    "definicion": "Tecnología de comunicación inalámbrica de corto alcance, permitiendo el intercambio de datos instantáneos y seguros al acercar los dispositivos."
+  },
+  {
+    "concepto": "Nivel de endeudamiento",
+    "definicion": "Proporción entre la deuda total de una persona o empresa y sus ingresos y/o patrimonio, nos ayuda a evaluar el riesgo financiero."
+  },
+  {
+    "concepto": "NSS",
+    "definicion": "Número de Seguridad Social. Número único, permanente e intransferible, asignado a cada trabajador del IMSS, estudiantes de ciertas universidades públicas y personas con seguro voluntario para su identificación en el sistema de seguridad social."
+  },
+  {
+    "concepto": "Participantes del SAR",
+    "definicion": "Instituciones y actores que forman parte del Sistema de Ahorro para el Retiro, como Afores, autoridades y trabajadores."
+  },
+  {
+    "concepto": "Patrimonio",
+    "definicion": "Conjunto de bienes, derechos y recursos que posee una persona o empresa."
+  },
+  {
+    "concepto": "Pensión",
+    "definicion": "Ingreso que recibe una persona al retirarse, derivado de su ahorro o sistema de seguridad social."
+  },
+  {
+    "concepto": "Pensión Garantizada",
+    "definicion": "Monto mínimo que el gobierno asegura a quienes cumplen ciertos requisitos."
+  },
+  {
+    "concepto": "Pensión Mínima garantizada",
+    "definicion": "Ingreso mínimo otorgado por el gobierno cuando el ahorro acumulado no es suficiente para una pensión mayor."
+  },
+  {
+    "concepto": "Pensión vitalicia",
+    "definicion": "Pensión mensual que se recibe de por vida, generalmente contratada con una aseguradora. Se intercambian los recursos de tu Afore por este monto."
+  },
+  {
+    "concepto": "Perspectivas transversales",
+    "definicion": "Enfoques que consideran distintos factores sociales y económicos en la toma de decisiones."
+  },
+  {
+    "concepto": "Pharming",
+    "definicion": "Tipo de fraude que redirige a sitios web falsos para robar información."
+  },
+  {
+    "concepto": "Phishing",
+    "definicion": "Fraude en el que se engaña a las personas para obtener datos personales mediante correos o sitios falsos."
+  },
+  {
+    "concepto": "PIB",
+    "definicion": "Indicador total de bienes y servicios producidos en un país en un periodo determinado."
+  },
+  {
+    "concepto": "Planeación del retiro",
+    "definicion": "Proceso de organizar el ahorro y las decisiones financieras para asegurar ingresos en la vejez."
+  },
+  {
+    "concepto": "Planeación Financiera",
+    "definicion": "Organización de ingresos, gastos, ahorro e inversión para alcanzar objetivos económicos."
+  },
+  {
+    "concepto": "Plusvalía",
+    "definicion": "Aumento en el valor de un activo o bien a lo largo del tiempo, debido a factores externos."
+  },
+  {
+    "concepto": "Población de la economía plateada",
+    "definicion": "Personas adultas mayores que requieren productos y servicios financieros adaptados a sus necesidades."
+  },
+  {
+    "concepto": "Población no bancarizada",
+    "definicion": "Personas que no tienen acceso a servicios financieros formales, como cuentas bancarias o créditos, lo que limita su participación en el sistema financiero."
+  },
+  {
+    "concepto": "Poblaciones vulnerables",
+    "definicion": "Grupos que enfrentan condiciones económicas o sociales desfavorables, como bajos ingresos, acceso limitado a servicios o ubicación geográfica, lo que dificulta su inclusión financiera."
+  },
+  {
+    "concepto": "Portabilidad de derechos",
+    "definicion": "Posibilidad de trasladar derechos de seguridad social entre distintas instituciones."
+  },
+  {
+    "concepto": "Preocupaciones financieras",
+    "definicion": "Situaciones que generan estrés o incertidumbre sobre el dinero."
+  },
+  {
+    "concepto": "Préstamo",
+    "definicion": "Dinero que se recibe con la obligación de devolverlo en el futuro, generalmente con intereses."
+  },
+  {
+    "concepto": "Presupuesto",
+    "definicion": "Plan que organiza ingresos y gastos para administrar el dinero."
+  },
+  {
+    "concepto": "Procrastinación",
+    "definicion": "Hábito de posponer decisiones o acciones, como ahorrar o pagar deudas."
+  },
+  {
+    "concepto": "Producto financiero Centrado en el cliente",
+    "definicion": "Servicio diseñado considerando las necesidades y características de las personas usuarias."
+  },
+  {
+    "concepto": "Productos financieros",
+    "definicion": "Herramientas como cuentas, créditos o inversiones ofrecidas por instituciones."
+  },
+  {
+    "concepto": "PROFEDET",
+    "definicion": "Procuraduría Federal de la Defensa del Trabajo. Órgano que protege los derechos de trabajadores principalmente, dentro de la competencia federal."
+  },
+  {
+    "concepto": "Propósito financiero",
+    "definicion": "Objetivo personal relacionado con el uso del dinero, como ahorrar o invertir."
+  },
+  {
+    "concepto": "Protección de datos",
+    "definicion": "Medidas para resguardar la información personal y evitar su uso indebido."
+  },
+  {
+    "concepto": "PyMEs",
+    "definicion": "Pequeñas y medianas empresas que generan empleo y actividad económica."
+  },
+  {
+    "concepto": "Radiografía financiera",
+    "definicion": "Herramienta digital de la CONSAR que resume la información financiera más relevante de cada Afore, como rendimientos, comisiones y composición de inversiones, para facilitar su análisis y comparación."
+  },
+  {
+    "concepto": "Reasignación",
+    "definicion": "Proceso mediante el cual una cuenta Afore es transferida automáticamente a otra administradora."
+  },
+  {
+    "concepto": "Registro de Afore",
+    "definicion": "Proceso para elegir y abrir una cuenta en una Afore."
+  },
+  {
+    "concepto": "Regularización de cuenta",
+    "definicion": "Proceso para corregir o actualizar información en una cuenta Afore para asegurar su correcto funcionamiento."
+  },
+  {
+    "concepto": "Remesas",
+    "definicion": "Dinero enviado desde el extranjero a familiares en otro país."
+  },
+  {
+    "concepto": "Remesas Digitales",
+    "definicion": "Transferencias de dinero realizadas electrónicamente, a menudo por migrantes para enviar dinero a sus países de origen de manera segura y eficiente."
+  },
+  {
+    "concepto": "Rendimiento",
+    "definicion": "Ganancias o pérdidas obtenidos por una inversión durante un periodo específico."
+  },
+  {
+    "concepto": "Renta fija",
+    "definicion": "Inversiones que ofrecen rendimientos predecibles."
+  },
+  {
+    "concepto": "Renta variable",
+    "definicion": "Inversiones cuyos rendimientos pueden variar según el mercado."
+  },
+  {
+    "concepto": "Renta Vitalicia",
+    "definicion": "Pago periódico de por vida contratado con una aseguradora."
+  },
+  {
+    "concepto": "Rentabilidad",
+    "definicion": "Capacidad de una inversión para generar ganancias."
+  },
+  {
+    "concepto": "Reparto Solidario",
+    "definicion": "Sistema donde las aportaciones de trabajadores activos financian pensiones actuales."
+  },
+  {
+    "concepto": "Requisitos de pensión",
+    "definicion": "Condiciones necesarias para obtener una pensión."
+  },
+  {
+    "concepto": "Resiliencia",
+    "definicion": "Capacidad de adaptarse a situaciones difíciles."
+  },
+  {
+    "concepto": "Resiliencia financiera",
+    "definicion": "Capacidad de enfrentar imprevistos económicos sin afectar la estabilidad."
+  },
+  {
+    "concepto": "Retiro de Ahorro Voluntario",
+    "definicion": "Extracción de recursos aportados de forma voluntaria en la Afore."
+  },
+  {
+    "concepto": "Retiro parcial por desempleo",
+    "definicion": "Retiro de una parte del ahorro al quedarse sin trabajo."
+  },
+  {
+    "concepto": "Retiro parcial por matrimonio",
+    "definicion": "Retiro de una parte del ahorro por concepto de matrimonio."
+  },
+  {
+    "concepto": "Retiro por cesantía",
+    "definicion": "Acceso al ahorro al dejar de trabajar antes de la edad de retiro."
+  },
+  {
+    "concepto": "Retiro programado",
+    "definicion": "Modalidad en la que el ahorro se administra y se entrega en pagos periódicos."
+  },
+  {
+    "concepto": "Retiros Parciales",
+    "definicion": "Extracciones de una parte del ahorro antes del retiro total."
+  },
+  {
+    "concepto": "Reto financiero",
+    "definicion": "Meta o desafío relacionado con mejorar hábitos financieros."
+  },
+  {
+    "concepto": "Retorno sobre la Inversión",
+    "definicion": "Medida que indica la ganancia obtenida respecto al dinero invertido."
+  },
+  {
+    "concepto": "Riesgo financiero",
+    "definicion": "Probabilidad de perder dinero en una inversión o decisión financiera."
+  },
+  {
+    "concepto": "Robo de identidad",
+    "definicion": "Uso indebido de datos personales para cometer fraudes."
+  },
+  {
+    "concepto": "Salario",
+    "definicion": "Pago que recibe una persona por su trabajo."
+  },
+  {
+    "concepto": "Salario Base de Cotización",
+    "definicion": "Monto con el que se calculan aportaciones y prestaciones de seguridad social."
+  },
+  {
+    "concepto": "Salud financiera",
+    "definicion": "Estado de las finanzas personales en un momento determinado, basado en el equilibrio entre ingresos, gastos, ahorro y deudas. Refleja qué tan bien administras tu dinero en el día a día."
+  },
+  {
+    "concepto": "SAR",
+    "definicion": "Sistema de Ahorro para el Retiro que administra las cuentas individuales de los trabajadores."
+  },
+  {
+    "concepto": "SARTEL",
+    "definicion": "Centro de Atención Telefónica del Sistema de Ahorro para el Retiro que permite a los trabajadores localizar su Afore, consultar saldos y obtener información sobre su cuenta individual de retiro."
+  },
+  {
+    "concepto": "SB inicial",
+    "definicion": "Salario base registrado al inicio de la cotización."
+  },
+  {
+    "concepto": "SB pensiones",
+    "definicion": "Salario base utilizado para calcular el monto de la pensión."
+  },
+  {
+    "concepto": "Seguridad Financiera",
+    "definicion": "Capacidad de una persona para mantenerse estable económicamente ante imprevistos o en el largo plazo, gracias a ahorros, seguros o fuentes de ingreso que brindan respaldo."
+  },
+  {
+    "concepto": "Seguridad transaccional",
+    "definicion": "Medidas que protegen las operaciones financieras contra fraudes o accesos no autorizados."
+  },
+  {
+    "concepto": "Seguro",
+    "definicion": "Contrato que protege económicamente ante riesgos a cambio de un pago."
+  },
+  {
+    "concepto": "Seguro de gastos médicos",
+    "definicion": "Cobertura para gastos de atención médica."
+  },
+  {
+    "concepto": "Seguro de invalidez",
+    "definicion": "Protección económica en caso de incapacidad para trabajar."
+  },
+  {
+    "concepto": "Seguro de vida",
+    "definicion": "Producto financiero que protege económicamente a los beneficiarios en caso de fallecimiento del asegurado."
+  },
+  {
+    "concepto": "Semanas Cotizadas",
+    "definicion": "Número de semanas que una persona ha aportado al sistema de seguridad social."
+  },
+  {
+    "concepto": "Servicios",
+    "definicion": "Actividades ofrecidas por instituciones para atender necesidades financieras."
+  },
+  {
+    "concepto": "Sesgo de anclaje",
+    "definicion": "Tendencia a tomar decisiones basadas en la primera información recibida."
+  },
+  {
+    "concepto": "Sesgo de disponibilidad",
+    "definicion": "Tendencia a basar decisiones en información reciente o fácil de recordar."
+  },
+  {
+    "concepto": "Sesgos",
+    "definicion": "Errores de pensamiento que afectan la toma de decisiones."
+  },
+  {
+    "concepto": "Sesgos financieros",
+    "definicion": "Distorsiones en decisiones relacionadas con el dinero."
+  },
+  {
+    "concepto": "SIEFORE",
+    "definicion": "Sociedades de inversión donde las Afores invierten los recursos de los trabajadores."
+  },
+  {
+    "concepto": "Siefores Adicionales",
+    "definicion": "Fondos complementarios con estrategias específicas de inversión."
+  },
+  {
+    "concepto": "Siefores Básicas",
+    "definicion": "Fondos principales donde se invierte el ahorro según la edad."
+  },
+  {
+    "concepto": "Siefores generacionales",
+    "definicion": "Fondos organizados por año de nacimiento para optimizar el rendimiento."
+  },
+  {
+    "concepto": "Simulador de pensiones",
+    "definicion": "Herramienta que estima el monto de la pensión futura."
+  },
+  {
+    "concepto": "Sistema de pensiones",
+    "definicion": "Conjunto de reglas e instituciones que administran el retiro."
+  },
+  {
+    "concepto": "Skimming",
+    "definicion": "Técnica para copiar datos de tarjetas mediante dispositivos instalados en cajeros o terminales."
+  },
+  {
+    "concepto": "Smishing",
+    "definicion": "Es un tipo de fraude que utiliza mensajes de texto o SMS para engañarte y obtener tus datos personales o financieros, haciéndose pasar por instituciones confiables o promociones falsas."
+  },
+  {
+    "concepto": "SNEF",
+    "definicion": "Sistema Nacional de Educación Financiera."
+  },
+  {
+    "concepto": "SOFINCOS",
+    "definicion": "Sociedades Financieras Comunitarias que ofrecen servicios en zonas rurales."
+  },
+  {
+    "concepto": "SOFIPOS",
+    "definicion": "Sociedades Financieras Populares que brindan servicios financieros a sectores no atendidos por la banca tradicional."
+  },
+  {
+    "concepto": "Solicitud de Estado de Cuenta",
+    "definicion": "Trámite para obtener el documento con movimientos y saldo de una cuenta."
+  },
+  {
+    "concepto": "Status quo",
+    "definicion": "Tendencia a mantener la situación actual y evitar cambios."
+  },
+  {
+    "concepto": "Subcuenta de aportaciones voluntarias",
+    "definicion": "Parte de la cuenta Afore donde se registran aportaciones adicionales."
+  },
+  {
+    "concepto": "Subcuenta Retiro, Cesantía en Edad Avanzada y Vejez (RCV)",
+    "definicion": "Subcuenta donde se registran recursos para retiro, cesantía y vejez."
+  },
+  {
+    "concepto": "Subcuenta vivienda",
+    "definicion": "Cuenta donde se acumulan aportaciones para créditos de vivienda."
+  },
+  {
+    "concepto": "Suplantación de identidad",
+    "definicion": "Uso indebido de datos personales para hacerse pasar por otra persona."
+  },
+  {
+    "concepto": "Tarjeta de crédito",
+    "definicion": "Instrumento que permite realizar compras a crédito con pago posterior."
+  },
+  {
+    "concepto": "Tasa de interés",
+    "definicion": "Porcentaje que se paga o se gana por el uso del dinero."
+  },
+  {
+    "concepto": "Tasa de reemplazo",
+    "definicion": "Porcentaje del último salario que representa la pensión."
+  },
+  {
+    "concepto": "Toma el Control de tu Futuro",
+    "definicion": "Publicación digital mensual de la CONSAR que ofrece contenidos de educación financiera y previsional para apoyar la toma de decisiones sobre finanzas personales y ahorro para el retiro."
+  },
+  {
+    "concepto": "Trabajador independiente",
+    "definicion": "Persona que trabaja por cuenta propia sin relación laboral."
+  },
+  {
+    "concepto": "Trabajo formal",
+    "definicion": "Empleo con prestaciones y registro ante la seguridad social."
+  },
+  {
+    "concepto": "Trabajo informal",
+    "definicion": "Actividad laboral sin acceso a prestaciones ni seguridad social."
+  },
+  {
+    "concepto": "Transformación digital",
+    "definicion": "Proceso de integración de tecnologías digitales en todas las áreas de una organización, que modifica la forma en que opera y ofrece valor a las personas usuarias."
+  },
+  {
+    "concepto": "Transparencia",
+    "definicion": "Acceso claro y oportuno a la información financiera."
+  },
+  {
+    "concepto": "Traspaso de cuenta",
+    "definicion": "Proceso que permite a una persona trabajadora trasladar su cuenta individual de una Afore a otra, con el objetivo de elegir la opción que mejor se adapte a sus necesidades."
+  },
+  {
+    "concepto": "Trayectoria laboral",
+    "definicion": "Historial de empleos y periodos de cotización de una persona a lo largo de su vida laboral."
+  },
+  {
+    "concepto": "UMA",
+    "definicion": "Unidad de Medida y Actualización. Es un valor de referencia económico que se utiliza en México para calcular multas, impuestos y prestaciones, en lugar del salario mínimo."
+  },
+  {
+    "concepto": "Unidad Especializada de Atención al Público (UEAP)",
+    "definicion": "Área de atención en instituciones financieras para resolver dudas o reclamaciones."
+  },
+  {
+    "concepto": "Unificación de cuentas",
+    "definicion": "Proceso de juntar varias cuentas Afore en una sola."
+  },
+  {
+    "concepto": "Utilidades",
+    "definicion": "Ganancias generadas por una empresa o inversión."
+  },
+  {
+    "concepto": "Validación biométrica",
+    "definicion": "Verificación de identidad mediante características físicas como huellas digitales o reconocimiento facial."
+  },
+  {
+    "concepto": "Valor futuro",
+    "definicion": "Valor que tendrá una inversión o ahorro en una fecha futura considerando los rendimientos."
+  },
+  {
+    "concepto": "Valor presente",
+    "definicion": "Valor actual de una cantidad de dinero que se recibirá en el futuro."
+  },
+  {
+    "concepto": "Verificación de identidad",
+    "definicion": "Proceso para confirmar que una persona es quien dice ser."
+  },
+  {
+    "concepto": "Vishing",
+    "definicion": "Es un tipo de fraude en el que los delincuentes realizan llamadas telefónicas para engañarte y obtener tus datos personales o financieros, haciéndose pasar por instituciones confiables."
+  }
+]

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,77 +8,96 @@
     <title>Glosario | CONSAR</title>
     <link rel="icon" href="img/icons/presentacion-financiera.png" type="image/webp">
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="#">glosario</a>
-            <a href="#">temas</a>
-            <a href="#">aprender</a>
+            <a href="index.html" class="active">Glosario</a>
+            <a href="#">Temas</a>
+            <a href="#">Aprender</a>
         </nav>
     </header>
-    <main>
-        <h1>glosario de terminos consar </h1>
-        <section>
-            <li>
-                <ul>a</ul>
-                <ul>b</ul>
-                <ul>c</ul>
-                <ul>d</ul>
-                <ul>e</ul>
-                <ul>f</ul>
-                <ul>g</ul>
-                <ul>h</ul>
-                <ul>i</ul>
-                <ul>j</ul>
-                <ul>k</ul>
-                <ul>l</ul>
-                <ul>m</ul>
-                <ul>n</ul>
-                <ul>ñ</ul>
-                <ul>o</ul>
-                <ul>p</ul>
-                <ul>q</ul>
-                <ul>r</ul>
-                <ul>s</ul>
-                <ul>t</ul>
-                <ul>v</ul>
-                <ul>w</ul>
-                <ul>x</ul>
-                <ul>y</ul>
-                <ul>z</ul>
-            </li>
-        </section>
-        <div>
 
+    <main>
+        <section>
+            <h1>Glosario de Términos CONSAR</h1>
+            <p>Encuentra y comprende los conceptos clave del Sistema de Ahorro para el Retiro.</p>
+        </section>
+
+        <section>
+            <ul class="lista_nav">
+                <li><a href="#A">A</a></li>
+                <li><a href="#B">B</a></li>
+                <li><a href="#C">C</a></li>
+                <li><a href="#D">D</a></li>
+                <li><a href="#E">E</a></li>
+                <li><a href="#F">F</a></li>
+                <li><a href="#G">G</a></li>
+                <li><a href="#H">H</a></li>
+                <li><a href="#I">I</a></li>
+                <li><a href="#J">J</a></li>
+                <li><a href="#K">K</a></li>
+                <li><a href="#L">L</a></li>
+                <li><a href="#M">M</a></li>
+                <li><a href="#N">N</a></li>
+                <li><a href="#Ñ">Ñ</a></li>
+                <li><a href="#O">O</a></li>
+                <li><a href="#P">P</a></li>
+                <li><a href="#Q">Q</a></li>
+                <li><a href="#R">R</a></li>
+                <li><a href="#S">S</a></li>
+                <li><a href="#T">T</a></li>
+                <li><a href="#V">V</a></li>
+                <li><a href="#W">W</a></li>
+                <li><a href="#X">X</a></li>
+                <li><a href="#Y">Y</a></li>
+                <li><a href="#Z">Z</a></li>
+            </ul>
+        </section>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar un término...">
         </div>
+
+        <div id="glossary-container" class="terms-grid">
+            <p class="loading">Cargando términos...</p>
+        </div>
+
+
+        <a href="/admin.html" target="_blank">
+            login administrador
+        </a>
+
     </main>
+
     <footer>
-        <p>
-            redes socailes
-        </p>
-        <div>
-            <a href="https://www.facebook.com/ConsarMexico/?locale=es_LA" target="_blank">
-                <img src="img/icons/facebook.svg" alt="CONSAR facebook" width="25rem">
-            </a>
-            <a href="https://www.instagram.com/consar_mx/" target="_blank">
-                <img src="img/icons/instagram.svg" alt="CONSAR instagram" width="25rem">
-            </a>
-            <a href="https://mx.linkedin.com/company/consar-mx" target="_blank">
-                <img src="img/icons/linkedin.svg" alt="CONSAR linkedin" width="25rem">
-            </a>
-            <a href="https://www.tiktok.com/@consar_mx" target="_blank">
-                <img src="img/icons/tiktok.svg" alt="CONSAR tiktok" width="25rem">
-            </a>
-            <a href="https://x.com/CONSAR_mx" target="_blank">
-                <img src="img/icons/twitterX.svg" alt="CONSAR twiter X" width="25rem">
-            </a>
-            <a href="https://www.youtube.com/CONSARMexico" target="_blank">
-                <img src="img/icons/youtube.svg" alt="CONSAR YouTube" width="25rem">
-            </a>
+        <div class="footer-content">
+            <p>Redes Sociales</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/ConsarMexico/?locale=es_LA" target="_blank">
+                    <img src="img/icons/facebook.svg" alt="CONSAR facebook" width="25">
+                </a>
+                <a href="https://www.instagram.com/consar_mx/" target="_blank">
+                    <img src="img/icons/instagram.svg" alt="CONSAR instagram" width="25">
+                </a>
+                <a href="https://mx.linkedin.com/company/consar-mx" target="_blank">
+                    <img src="img/icons/linkedin.svg" alt="CONSAR linkedin" width="25">
+                </a>
+                <a href="https://www.tiktok.com/@consar_mx" target="_blank">
+                    <img src="img/icons/tiktok.svg" alt="CONSAR tiktok" width="25">
+                </a>
+                <a href="https://x.com/CONSAR_mx" target="_blank">
+                    <img src="img/icons/twitterX.svg" alt="CONSAR twitter X" width="25">
+                </a>
+                <a href="https://www.youtube.com/CONSARMexico" target="_blank">
+                    <img src="img/icons/youtube.svg" alt="CONSAR YouTube" width="25">
+                </a>
+            </div>
+            <p class="copyright">Comisión Nacional del Sistema de Ahorro para el Retiro</p>
         </div>
-        <p>
-            Comision Nacional del Sistema de Ahorro para el Retiro
-        </p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>

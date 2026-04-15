@@ -14,15 +14,16 @@ formulario.addEventListener('submit',async (e) => {
     };
     try {
         if (editandoId) {
-        await db_actualizarTermino(editandoId, datosTermino);
+        await db_actualizarTermino(editandoId, nuevoTermino);
         alert("Término actualizado con éxito");
 
         // Resetear el estado del formulario
         editandoId = null;
         document.getElementById('btn-guardar').innerText = "Guardar Término";
+        document.getElementById('btn-cancelar').style.display = "none"; // ocultamos a la terminal
         } else {
             // Si es null, gurdamos uno nuevo como antes
-            await db_guardarTermino(datosTermino);
+            await db_guardarTermino(nuevoTermino);
             alert("Guardado con éxito");
         }
 
@@ -76,7 +77,7 @@ window.cancelarEdicion = () => {
     document.getElementById('btn-cancelar').style.display = "none";
 
     // 4. Resetear la variable de edición para que no sobrescriba datos por error
-    editandoID = null;
+    editandoId = null;
 
     console.log("Formulario reseteado correctamente.");
 };
