@@ -55,12 +55,18 @@
             </ul>
         </section>
 
-        <div class="search-container">
+        <!-- <div class="search-container">
             <input type="text" id="search-input" placeholder="Buscar un término...">
         </div>
 
         <div id="glossary-container" class="terms-grid">
             <p class="loading">Cargando términos...</p>
+        </div> -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar un término...">
+        </div>
+
+        <div id="glossary-container">
         </div>
 
 
@@ -97,6 +103,10 @@
         </div>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/metodo_buscar.js"></script>
     <script src="js/main.js"></script>
 </body>
 
