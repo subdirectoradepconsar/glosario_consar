@@ -13,16 +13,26 @@
     <header>
         <nav>
             <a href="index.html" class="active">Glosario</a>
-            <a href="#">Temas</a>
-            <a href="#">Aprender</a>
+            <!-- <a href="#">Aprender</a> -->
+            <a href="admin.html" target="_blank">
+                login administrador</a>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="titulo">
             <h1>Glosario de Términos CONSAR</h1>
-            <p>Encuentra y comprende los conceptos clave del Sistema de Ahorro para el Retiro.</p>
+            <p class="texto">Encuentra y comprende los conceptos clave del Sistema de Ahorro para el Retiro.</p>
         </section>
+
+
+        <!-- <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar un término...">
+        </div> -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar un término...">
+            <div id="search-results" class="search-suggestions"></div>
+        </div>
 
         <section>
             <ul class="lista_nav">
@@ -55,24 +65,17 @@
             </ul>
         </section>
 
-        <!-- <div class="search-container">
-            <input type="text" id="search-input" placeholder="Buscar un término...">
-        </div>
-
-        <div id="glossary-container" class="terms-grid">
-            <p class="loading">Cargando términos...</p>
-        </div> -->
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Buscar un término...">
-        </div>
-
         <div id="glossary-container">
         </div>
 
+        <div id="contenedor-terminos">
+        </div>
 
-        <a href="/admin.html" target="_blank">
-            login administrador
-        </a>
+
+        <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
+        <script src="js/database.js"></script>
+        <script src="js/admin.js"></script>
 
     </main>
 
