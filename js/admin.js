@@ -1,41 +1,80 @@
+// --- SECCIÓN DE AUTENTICACIÓN ---
+
+// 1. Observador: Controla qué ver en pantalla (Login o Panel)
+firebase.auth().onAuthStateChanged((user) => {
+    const loginSec = document.getElementById('login-section');
+    const adminPanel = document.getElementById('admin-panel');
+
+    if (user) {
+        // Si hay usuario, mostramos el panel y ocultamos el login
+        loginSec.style.display = 'none';
+        adminPanel.style.display = 'block';
+        console.log("Sesión activa:", user.email);
+    } else {
+        // Si no hay usuario, mostramos login y ocultamos el panel
+        loginSec.style.display = 'block';
+        adminPanel.style.display = 'none';
+    }
+});
+
+// 2. Función para Iniciar Sesión
+window.handleLogin = async () => {
+    const email = document.getElementById('admin-email').value;
+    const pass = document.getElementById('admin-password').value;
+
+    try {
+        await firebase.auth().signInWithEmailAndPassword(email, pass);
+        console.log("Acceso concedido");
+    } catch (error) {
+        alert("Credenciales incorrectas. Intente de nuevo.");
+        console.error("Error de login:", error.message);
+    }
+};
+
+// 3. Función para Cerrar Sesión
+window.handleLogout = () => {
+    if (confirm("¿Cerrar sesión administrativa?")) {
+        firebase.auth().signOut();
+    }
+};
+
+
+// --- SECCIÓN DE GESTIÓN DEL GLOSARIO (Tu código original) ---
+
 const formulario = document.getElementById('formulario-glosario');
 const contenedor = document.getElementById('contenedor-terminos');
 
-// Variable global para rastrear si estamos editando
 let editandoId = null;
 
-// Acciones al enviar el formumario
-formulario.addEventListener('submit',async (e) => {
+formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nuevoTermino = {
         concepto: document.getElementById('concepto').value,
         definicion: document.getElementById('definicion').value
     };
+
     try {
         if (editandoId) {
-        await db_actualizarTermino(editandoId, nuevoTermino);
-        alert("Término actualizado con éxito");
-
-        // Resetear el estado del formulario
-        editandoId = null;
-        document.getElementById('btn-guardar').innerText = "Guardar Término";
-        document.getElementById('btn-cancelar').style.display = "none"; // ocultamos a la terminal
+            await db_actualizarTermino(editandoId, nuevoTermino);
+            alert("Término actualizado con éxito");
+            
+            editandoId = null;
+            document.getElementById('btn-guardar').innerText = "Guardar Término";
+            document.getElementById('btn-cancelar').style.display = "none";
         } else {
-            // Si es null, gurdamos uno nuevo como antes
             await db_guardarTermino(nuevoTermino);
             alert("Guardado con éxito");
         }
-
         formulario.reset();
     } catch (error) {
         console.error("Error en la operación:", error);
-        alert("Hubo un error, revisa lo ingresado.");
+        alert("No tienes permisos para realizar esta acción o hubo un error.");
     }
 });
 
-// Al cargar se imprimen los datos en pantalla
-db_obtenerTerminos((datos)=> {
+// Escuchar cambios en la base de datos
+db_obtenerTerminos((datos) => {
     contenedor.innerHTML = '';
     if (datos) {
         for (let id in datos) {
@@ -51,40 +90,28 @@ db_obtenerTerminos((datos)=> {
     }
 });
 
-// Funcion para cargar los datos al formulario
 window.prepararEdicion = (id, concepto, definicion) => {
-    // Llenar los inputs con la información actual
     document.getElementById('concepto').value = concepto;
     document.getElementById('definicion').value = definicion;
-    // Cambiar el texto del boton para indicar que estamos editando
     document.getElementById('btn-guardar').innerText = "Actualizar Cambios";
-    // Mostramos El boton de cancelar
     document.getElementById('btn-cancelar').style.display = "inline-block";
-    // Guardar el ID del terminado que estamos editando
     editandoId = id;
-    // Mover el foco al inicio como en css
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 }
 
 window.cancelarEdicion = () => {
-    // 1. Limpiar el texto de los campos
     formulario.reset();
-
-    // 2. Regresar el botón a su estado original
     document.getElementById('btn-guardar').innerText = "Guardar Término";
-
-    // 3. Ocultar el botón de cancelar
     document.getElementById('btn-cancelar').style.display = "none";
-
-    // 4. Resetear la variable de edición para que no sobrescriba datos por error
     editandoId = null;
-
-    console.log("Formulario reseteado correctamente.");
 };
 
-// Funcion para el botón eliminar
 window.eliminar = async (id) => {
-    if(confirm("¿Eliminar?")) {
-        await db_eliminarTermino(id);
+    if (confirm("¿Estás seguro de eliminar este término?")) {
+        try {
+            await db_eliminarTermino(id);
+        } catch (error) {
+            alert("Error al eliminar. Asegúrate de tener sesión iniciada.");
+        }
     }
 };

@@ -9,28 +9,54 @@
 </head>
 
 <body>
-    <h1> Panel de Administración - Glosario</h1>
-    <form id="formulario-glosario">
-        <div class="campo">
-            <label for="concepto">Concepto: </label>
-            <input type="text" id="concepto" placeholder="Escribe el concepto ..." required>
-        </div> <br>
-        <div class="campo">
-            <label for="definicion">Definición: </label>
-            <textarea id="definicion" placeholder="Escribe la defición aqui ..."></textarea>
-        </div> <br>
-        <button type="submit" id="btn-guardar"> Guardar Término</button>
-        <button type="button" id="btn-cancelar" onclick="cancelarEdicion()">Cancelar Edicion</button>
-    </form>
+    <header id="header">
+        <img id="gobiernoDeMexico" src="https://www.gob.mx/resources/img/logo_gob_mx.png?pfdrid_c=false&uid=578f241b-8ab9-4d44-a04b-80a5600c7a53" 
+            alt="gobierno de méxico">
+    </header>
+    <main>
+        <section id="login-section" class="form-container" style="margin-top: 50px;">
+            <div class="titulo" style="text-align: center; border: none;">
+                <h1>Acceso Administrativo</h1>
+                <p>Ingresa tus credenciales para continuar</p>
+            </div>
+            <div style="max-width: 400px; margin: 0 auto;">
+                <input type="email" id="admin-email" placeholder="Correo electrónico" style="width:100%; margin-bottom:10px; padding:10px;">
+                <input type="password" id="admin-password" placeholder="Contraseña" style="width:100%; margin-bottom:10px; padding:10px;">
+                <button onclick="handleLogin()" class="btn-save" style="width:100%;">Ingresar</button>
+            </div>
+        </section>
 
-    <hr>
-    <div id="contenedor-terminos">
+        <section id="admin-panel" style="display: none;">
+            <div class="titulo">
+                <h1>Panel de Administración</h1>
+                <button onclick="handleLogout()" style="background:#666; font-size: 0.8rem; padding: 5px 15px; float: right;">Cerrar Sesión</button>
+            </div>
 
-    </div>
+            <form id="formulario-glosario" class="form-container">
+                <div class="campo">
+                    <label for="concepto">Concepto: </label>
+                    <input type="text" id="concepto" placeholder="Escribe el concepto..." required>
+                </div> 
+                <div class="campo" style="margin-top:15px;">
+                    <label for="definicion">Definición: </label>
+                    <textarea id="definicion" placeholder="Escribe la definición aquí..." rows="5"></textarea>
+                </div> 
+                <div style="margin-top:20px; display: flex; gap: 10px;">
+                    <button type="submit" id="btn-guardar" class="btn-save">Guardar Término</button>
+                    <button type="button" id="btn-cancelar" onclick="cancelarEdicion()" style="background:#888; display:none;">Cancelar Edición</button>
+                </div>
+            </form>
 
+            <hr>
+            <div id="contenedor-terminos">
+                </div>
+        </section>
+    </main>
 
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    
     <script src="js/database.js"></script>
     <script src="js/admin.js"></script>
 </body>

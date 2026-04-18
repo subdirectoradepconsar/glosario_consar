@@ -4,8 +4,7 @@
     --primario_verde: rgb(39, 199, 39);
     --primario_azulfuerte: rgb(21, 30, 207);
     --primario_azulclaro: rgb(0, 162, 255);
-
-
+    --colorIntitucional: #611232;
 }
 * {
     padding: 0;
@@ -75,7 +74,7 @@ footer {
 .search-box {
     width: 100%;
     max-width: 600px;
-    margin-bottom: 30px;
+    
 }
 
 .search-box input {
@@ -306,3 +305,17 @@ html {
     color: #999;
     text-align: center;
 }
+
+#header {
+    background-color: #611232;
+}
+#gobiernoDeMexico {
+    padding: 1rem;
+    max-width: 12rem;
+}
+
+/* #panel_busqueda {
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+} */
