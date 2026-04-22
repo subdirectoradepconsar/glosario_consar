@@ -1,4 +1,4 @@
-:root{
+:root {
     --fuente_principal: "Noto Sans", sans-serif;
     /* Colores primarios */
     --primario_verde: rgb(39, 199, 39);
@@ -6,6 +6,7 @@
     --primario_azulclaro: rgb(0, 162, 255);
     --colorIntitucional: #611232;
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -17,6 +18,7 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -26,55 +28,28 @@ main {
     align-items: center; /* Centra los elementos hijos horizontalmente */
 }
 
-footer {
-    background-color: gray;
-}
-
-.lista_nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    gap: 15px;
-}
-
-/* Estilo de cada letra */
-.lista_nav li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #004b40;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.alphabet-list li a:hover {
-    color: #d4af37;
-    border-bottom: 2px solid #d4af37;
-}
-
-.titulo p {
-    color: #666;
-    ;
-}
-
-.titulo h1 {
-    font-size: 2.5rem;
-    color: #004b40;
-    text-transform: uppercase;
-}
-
-.texto {
-    color: white;
-}
-
-/* Barra de Búsqueda Centrada */
-.search-box {
+/* Header Institucional */
+#header {
+    background-color: var(--colorIntitucional); /* Color Guinda oficial */
     width: 100%;
-    max-width: 600px;
-    
+    border-bottom: 2px solid var(--colorIntitucional); /* Acento de color institucional */
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+#gobiernoDeMexico {
+    max-width: 220px; /* Tamaño adecuado para el logo */
+    padding: 10px 20px;
+    height: auto;
+}
+
+/* --- Barra de Búsqueda (Actualizada y consolidada) --- */
+.search-box {
+    position: relative; /* Necesario para que las sugerencias se posicionen bien */
+    width: 100%;
+    max-width: 500px;   /* Tamaño ideal para buscador */
+    margin: 0 auto;     /* Centrado horizontal */
+    margin-bottom: 20px;
 }
 
 .search-box input {
@@ -85,16 +60,47 @@ footer {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
-    text-align: center; /* Texto de búsqueda centrado */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
 }
 
 .search-box input:focus {
     border-color: #d4af37; /* Dorado al enfocar */
 }
 
-/* Fin de Barra de busqueda */
+/* Sugerencias flotantes */
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+}
 
-/* Abecedario Horizontal y Limpio */
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions-list li {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.suggestions-list li:hover {
+    background-color: #f1f1f1;
+    color: #004b40;
+}
+
+/* --- Abecedario --- */
 .lista_nav {
     display: flex;
     flex-wrap: wrap;
@@ -102,14 +108,17 @@ footer {
     list-style: none;
     gap: 15px;
     margin-bottom: 30px;
+    padding: 0;
 }
 
 .lista_nav li a {
     text-decoration: none;
-    color: #004b40;
+    text-transform: uppercase;
     font-weight: bold;
+    color: #004b40;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
     padding: 5px 10px;
-    transition: all 0.3s;
 }
 
 .lista_nav li a:hover {
@@ -117,9 +126,30 @@ footer {
     transform: scale(1.2);
 }
 
-/* fin abecedario */
+/* Estilo para letras sin contenido */
+.letra-inactiva {
+    color: #611232 !important; /* Tu color institucional */
+    opacity: 0.4;              /* Un poco transparente para indicar que no hay contenido */
+    cursor: default !important;
+    pointer-events: none;      /* Desactiva el clic */
+    text-decoration: none;
+}
 
-/* Contenedor de Resultados (Tarjetas) */
+/* --- Títulos --- */
+.titulo h1 {
+    font-size: 2.5rem;
+    color: #004b40;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.titulo p {
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* --- Contenedor de Resultados --- */
 #glossary-container {
     width: 100%;
     display: flex;
@@ -127,43 +157,6 @@ footer {
     gap: 20px;
 }
 
-/* Estilo para las tarjetas que inyecta JS */
-.detalle-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    width: 100%;
-}
-.detalle-card h2 {
-    color: #004b40;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #004b40;
-    color: white;
-    margin-top: 50px;
-}
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 15px 0;
-}
-.social-links img {
-    filter: brightness(0) invert(1); /* Hace los iconos blancos */
-    transition: transform 0.3s;
-}
-.social-links img:hover {
-    transform: translateY(-5px);
-}
-
-/* Estilos de diccionario completo */
-/* Secciones de letras */
 .letra-seccion {
     margin-bottom: 30px;
     width: 100%;
@@ -199,27 +192,45 @@ footer {
     font-weight: bold;
 }
 
-/* Suavizar el scroll al hacer clic en las letras de la nav */
-html {
-    scroll-behavior: smooth;
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #004b40;
+    color: white;
+    margin-top: 50px;
 }
 
-/* Bloque de taregeta emergente */
-/* Contenedor que cubre toda la pantalla */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.social-links img {
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Modal/Tarjeta Emergente --- */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
-/* La tarjeta blanca */
 .detalle-card {
     background: white;
     width: 90%;
@@ -231,91 +242,55 @@ html {
     animation: fadeIn 0.3s ease;
 }
 
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.btn-cerrar {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #666;
-}
-
-.btn-footer {
-    margin-top: 20px;
-    width: 100%;
-    padding: 10px;
-    background: #004b40;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-/* fin del bloque de targeta emergente */
 
-/* Bloque de nuevas cosas */
-.search-box {
-    position: relative; /* Importante para posicionar las sugerencias */
-    width: 100%;
-    max-width: 500px;
+html {
+    scroll-behavior: smooth;
 }
 
-.search-suggestions {
-    position: absolute;
-    top: 100%; /* Justo debajo del input */
-    left: 0;
-    right: 0;
-    background: white;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    z-index: 100; /* Por encima de todo */
-    max-height: 300px;
-    overflow-y: auto;
+/* Boton targeta */
+/* 1. ESTO ES CRUCIAL: El contenedor blanco debe ser relativo */
+.detalle-card {
+    /* ... (mantén tus estilos actuales de padding, background, etc.) ... */
+    position: relative; /* ¡NUEVO! Esto le dice a la X: "anclate a mis esquinas" */
 }
 
-.suggestions-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.suggestions-list li {
-    padding: 12px 20px;
+/* 2. REDISEÑO COMPLETO DE LA X */
+.btn-cerrar {
+    position: absolute; /* Lo saca del flujo y lo ancla */
+    top: 15px;          /* Distancia desde el borde superior blanco */
+    right: 15px;        /* Distancia desde el borde derecho blanco */
+    
+    /* Diseño del botón circular */
+    width: 32px;
+    height: 32px;
+    background-color: #f1f1f1; /* Fondo gris muy suave */
+    border: none;
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    
+    /* Diseño de la 'X' dentro del círculo */
+    color: #666;        /* Color gris suave */
+    font-size: 20px;    /* Tamaño de la X */
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Fuente limpia para el símbolo */
+    
+    /* Centrado perfecto de la X */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Interactividad */
     cursor: pointer;
-    border-bottom: 1px solid #eee;
-    transition: background 0.2s;
+    transition: all 0.2s ease;
+    z-index: 1010; /* Asegura que esté por encima de todo en la tarjeta */
 }
 
-.suggestions-list li:hover {
-    background-color: #f1f1f1;
-    color: #004b40;
+/* Efecto al pasar el mouse */
+.btn-cerrar:hover {
+    background-color: #e0e0e0; /* Fondo un poco más oscuro */
+    color: #333;               /* X más oscura */
+    transform: scale(1.1);     /* Crece un poquito */
 }
-
-.no-results {
-    padding: 15px;
-    color: #999;
-    text-align: center;
-}
-
-#header {
-    background-color: #611232;
-}
-#gobiernoDeMexico {
-    padding: 1rem;
-    max-width: 12rem;
-}
-
-/* #panel_busqueda {
-    position: sticky;
-    top: 0;
-    background-color: #f9f9f9;
-} */

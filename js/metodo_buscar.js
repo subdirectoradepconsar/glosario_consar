@@ -3,7 +3,7 @@ let conceptosIndex = [];
 
 // 1. Elementos del DOM
 const inputBusqueda = document.getElementById('search-input');
-const searchResults = document.getElementById('search-results'); 
+const searchResults = document.getElementById('search-results');
 const glossaryContainer = document.getElementById('glossary-container');
 
 // 2. Carga inicial del índice y el diccionario completo
@@ -17,7 +17,7 @@ async function cargarIndice() {
                     id: key,
                     nombre: data[key].concepto
                 }));
-                
+
                 // Pintamos el diccionario completo (A-Z) de fondo
                 mostrarDiccionarioCompleto(conceptosIndex);
                 console.log("Datos sincronizados con Firebase");
@@ -58,6 +58,23 @@ function mostrarDiccionarioCompleto(terminos) {
         }
     });
     glossaryContainer.innerHTML = htmlFinal;
+
+    // --- NUEVA LÓGICA PARA EL ÍNDICE ---
+    // Pinta de color gris en en nav de abecedario si no existen terminos que comiencen con esa letra
+    const linksNavegacion = document.querySelectorAll('.lista_nav li a');
+
+    linksNavegacion.forEach(link => {
+        // Obtenemos la letra del enlace (ej: "A")
+        const letraEnlace = link.innerText.toUpperCase();
+
+        // Verificamos si esa letra existe en nuestros grupos de datos
+        if (!grupos[letraEnlace]) {
+            link.classList.add('letra-inactiva');
+        } else {
+            // Si la letra vuelve a tener datos (por si actualizas la base), quitamos la clase
+            link.classList.remove('letra-inactiva');
+        }
+    });
 }
 
 // 4. Lógica del Buscador (Debounce)
@@ -77,7 +94,7 @@ const ejecutarBusqueda = debounce((texto) => {
         return;
     }
 
-    const resultados = conceptosIndex.filter(item => 
+    const resultados = conceptosIndex.filter(item =>
         item.nombre && item.nombre.toLowerCase().includes(query)
     );
 
@@ -109,9 +126,9 @@ function mostrarSugerencias(lista) {
 
 // Acción al hacer clic en una sugerencia del buscador
 window.seleccionarSugerencia = (id) => {
-    if (searchResults) searchResults.innerHTML = ""; 
-    if (inputBusqueda) inputBusqueda.value = "";     
-    cargarDefinicion(id); 
+    if (searchResults) searchResults.innerHTML = "";
+    if (inputBusqueda) inputBusqueda.value = "";
+    cargarDefinicion(id);
 };
 
 // 7. Carga de definición en Modal (Sin recargar ni borrar)
@@ -125,25 +142,27 @@ window.cargarDefinicion = (id) => {
                 modal.id = 'modal-termino';
                 document.body.appendChild(modal);
             }
+
+            // ... dentro de tu función cargarDefinicion ...
             
             modal.innerHTML = `
-                <div class="modal-overlay">
-                    <div class="detalle-card">
-                        <div class="modal-header">
-                            <h2>${data.concepto}</h2>
-                            <button class="btn-cerrar" onclick="document.getElementById('modal-termino').innerHTML=''">×</button>
-                        </div>
-                        <hr>
-                        <div class="modal-body">
-                            <p>${data.definicion}</p>
-                        </div>
-                        <button class="btn-footer" onclick="document.getElementById('modal-termino').innerHTML=''">Cerrar</button>
+            <div class="modal-overlay">
+                <div class="detalle-card">
+                    <button class="btn-cerrar" onclick="document.getElementById('modal-termino').innerHTML=''">×</button>
+                    
+                    <div class="modal-header">
+                        <h2>${data.concepto}</h2>
                     </div>
+                    <hr>
+                    <div class="modal-body">
+                        <p>${data.definicion}</p>
+                    </div>
+                    <button class="btn-footer" onclick="document.getElementById('modal-termino').innerHTML=''">Cerrar</button>
                 </div>
-            `;
+            </div>
+        `;
         }
     });
 };
-
 // Iniciar proceso
 cargarIndice();

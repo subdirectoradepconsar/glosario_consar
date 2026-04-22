@@ -6,12 +6,10 @@ firebase.auth().onAuthStateChanged((user) => {
     const adminPanel = document.getElementById('admin-panel');
 
     if (user) {
-        // Si hay usuario, mostramos el panel y ocultamos el login
         loginSec.style.display = 'none';
         adminPanel.style.display = 'block';
         console.log("Sesión activa:", user.email);
     } else {
-        // Si no hay usuario, mostramos login y ocultamos el panel
         loginSec.style.display = 'block';
         adminPanel.style.display = 'none';
     }
@@ -24,7 +22,6 @@ window.handleLogin = async () => {
 
     try {
         await firebase.auth().signInWithEmailAndPassword(email, pass);
-        console.log("Acceso concedido");
     } catch (error) {
         alert("Credenciales incorrectas. Intente de nuevo.");
         console.error("Error de login:", error.message);
@@ -39,19 +36,48 @@ window.handleLogout = () => {
 };
 
 
-// --- SECCIÓN DE GESTIÓN DEL GLOSARIO (Tu código original) ---
+// --- SECCIÓN DE GESTIÓN DEL GLOSARIO ---
 
 const formulario = document.getElementById('formulario-glosario');
 const contenedor = document.getElementById('contenedor-terminos');
 
 let editandoId = null;
 
+// Función para verificar si el término ya existe
+async function esDuplicado(concepto, idActual) {
+    const snapshot = await firebase.database().ref('glosario').once('value');
+    const data = snapshot.val();
+    
+    if (!data) return false;
+
+    const conceptoNormalizado = concepto.toLowerCase().trim();
+
+    for (let id in data) {
+        // Comparamos el nombre. Si el id es distinto al que estamos editando, es un duplicado real
+        if (data[id].concepto.toLowerCase().trim() === conceptoNormalizado && id !== idActual) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Acciones al enviar el formulario
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const conceptoInput = document.getElementById('concepto').value;
+    const definicionInput = document.getElementById('definicion').value;
+
+    // --- VALIDACIÓN DE DUPLICADOS ---
+    const duplicado = await esDuplicado(conceptoInput, editandoId);
+    if (duplicado) {
+        alert("¡Error! Ya existe un término con ese nombre en el glosario.");
+        return; // Detenemos el guardado
+    }
+
     const nuevoTermino = {
-        concepto: document.getElementById('concepto').value,
-        definicion: document.getElementById('definicion').value
+        concepto: conceptoInput,
+        definicion: definicionInput
     };
 
     try {
@@ -69,11 +95,11 @@ formulario.addEventListener('submit', async (e) => {
         formulario.reset();
     } catch (error) {
         console.error("Error en la operación:", error);
-        alert("No tienes permisos para realizar esta acción o hubo un error.");
+        alert("No tienes permisos o hubo un error al guardar.");
     }
 });
 
-// Escuchar cambios en la base de datos
+// Al cargar se imprimen los datos en pantalla
 db_obtenerTerminos((datos) => {
     contenedor.innerHTML = '';
     if (datos) {
