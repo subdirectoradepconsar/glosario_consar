@@ -143,24 +143,45 @@ window.cargarDefinicion = (id) => {
                 document.body.appendChild(modal);
             }
 
+            // --- LÓGICA PARA REFERENCIAS ---
+            let htmlReferencias = "";
+            if (data.referencias && data.referencias.length > 0) {
+                htmlReferencias = `
+                    <div style="margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px;">
+                        <p><strong>Referencias de consulta:</strong></p>
+                        <ul style="padding-left: 20px;">
+                            ${data.referencias.map(ref => `
+                                <li style="margin-bottom: 5px;">
+                                    <a href="${ref.url}" target="_blank" rel="noopener noreferrer" style="color: #611232; text-decoration: underline;">
+                                        ${ref.nombre}
+                                    </a>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
             // ... dentro de tu función cargarDefinicion ...
-            
+
             modal.innerHTML = `
-            <div class="modal-overlay">
-                <div class="detalle-card">
-                    <button class="btn-cerrar" onclick="document.getElementById('modal-termino').innerHTML=''">×</button>
-                    
-                    <div class="modal-header">
-                        <h2>${data.concepto}</h2>
+                <div class="modal-overlay">
+                    <div class="detalle-card">
+                        <button class="btn-cerrar" onclick="document.getElementById('modal-termino').innerHTML=''">×</button>
+                        
+                        <div class="modal-header">
+                            <h2>${data.concepto}</h2>
+                        </div>
+                        <hr>
+                        <div class="modal-body">
+                            <p>${data.definicion}</p>
+                            ${htmlReferencias} 
+                        </div>
+                        
                     </div>
-                    <hr>
-                    <div class="modal-body">
-                        <p>${data.definicion}</p>
-                    </div>
-                    <button class="btn-footer" onclick="document.getElementById('modal-termino').innerHTML=''">Cerrar</button>
                 </div>
-            </div>
-        `;
+            `;
+            /* <button class="btn-footer" onclick="document.getElementById('modal-termino').innerHTML=''">Cerrar</button> */
         }
     });
 };

@@ -8,7 +8,6 @@ firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         loginSec.style.display = 'none';
         adminPanel.style.display = 'block';
-        console.log("Sesión activa:", user.email);
     } else {
         loginSec.style.display = 'block';
         adminPanel.style.display = 'none';
@@ -23,8 +22,7 @@ window.handleLogin = async () => {
     try {
         await firebase.auth().signInWithEmailAndPassword(email, pass);
     } catch (error) {
-        alert("Credenciales incorrectas. Intente de nuevo.");
-        console.error("Error de login:", error.message);
+        alert("Credenciales incorrectas.");
     }
 };
 
@@ -43,17 +41,15 @@ const contenedor = document.getElementById('contenedor-terminos');
 
 let editandoId = null;
 
-// Función para verificar si el término ya existe
 async function esDuplicado(concepto, idActual) {
     const snapshot = await firebase.database().ref('glosario').once('value');
     const data = snapshot.val();
-    
+
     if (!data) return false;
 
     const conceptoNormalizado = concepto.toLowerCase().trim();
 
     for (let id in data) {
-        // Comparamos el nombre. Si el id es distinto al que estamos editando, es un duplicado real
         if (data[id].concepto.toLowerCase().trim() === conceptoNormalizado && id !== idActual) {
             return true;
         }
@@ -61,30 +57,60 @@ async function esDuplicado(concepto, idActual) {
     return false;
 }
 
-// Acciones al enviar el formulario
+// NUEVO: Función para agregar campos dinámicos
+window.agregarCampoReferencia = (nombre = "", url = "") => {
+    const container = document.getElementById('referencias-container');
+    const div = document.createElement('div');
+    div.className = 'ref-input-group';
+    div.style.display = 'flex';
+    div.style.gap = '10px';
+    div.style.marginBottom = '10px';
+
+    div.innerHTML = `
+        <input type="text" placeholder="Nombre del enlace" value="${nombre}" class="ref-nombre" style="flex: 1; padding: 5px;">
+        <input type="url" placeholder="URL del enlace" value="${url}" class="ref-url" style="flex: 2; padding: 5px;">
+        <button type="button" onclick="this.parentElement.remove()" style="background:#ff4d4d; color:white; border:none; cursor:pointer; padding: 5px 10px;">X</button>
+    `;
+    container.appendChild(div);
+}
+
+// Acciones al enviar el formulario (ACTUALIZADO PARA REFERENCIAS)
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const conceptoInput = document.getElementById('concepto').value;
     const definicionInput = document.getElementById('definicion').value;
 
-    // --- VALIDACIÓN DE DUPLICADOS ---
     const duplicado = await esDuplicado(conceptoInput, editandoId);
     if (duplicado) {
-        alert("¡Error! Ya existe un término con ese nombre en el glosario.");
-        return; // Detenemos el guardado
+        alert("¡Error! Ya existe un término con ese nombre.");
+        return;
+    }
+
+    // Recolectar referencias
+    const referencias = [];
+    const inputsNombres = document.querySelectorAll('.ref-nombre');
+    const inputsUrls = document.querySelectorAll('.ref-url');
+
+    for (let i = 0; i < inputsNombres.length; i++) {
+        if (inputsNombres[i].value.trim() !== "") {
+            referencias.push({
+                nombre: inputsNombres[i].value,
+                url: inputsUrls[i].value
+            });
+        }
     }
 
     const nuevoTermino = {
         concepto: conceptoInput,
-        definicion: definicionInput
+        definicion: definicionInput,
+        referencias: referencias // Guardamos el array aquí
     };
 
     try {
         if (editandoId) {
             await db_actualizarTermino(editandoId, nuevoTermino);
             alert("Término actualizado con éxito");
-            
             editandoId = null;
             document.getElementById('btn-guardar').innerText = "Guardar Término";
             document.getElementById('btn-cancelar').style.display = "none";
@@ -93,32 +119,52 @@ formulario.addEventListener('submit', async (e) => {
             alert("Guardado con éxito");
         }
         formulario.reset();
+        document.getElementById('referencias-container').innerHTML = ''; // Limpiar campos al terminar
     } catch (error) {
-        console.error("Error en la operación:", error);
-        alert("No tienes permisos o hubo un error al guardar.");
+        alert("Error al guardar.");
     }
 });
 
-// Al cargar se imprimen los datos en pantalla
+// Al cargar se imprimen los datos (ACTUALIZADO PARA PASAR REFERENCIAS)
 db_obtenerTerminos((datos) => {
     contenedor.innerHTML = '';
     if (datos) {
         for (let id in datos) {
+            // Codificamos las referencias para pasarlas al botón de editar de forma segura
+            const refsString = encodeURIComponent(JSON.stringify(datos[id].referencias || []));
+
             contenedor.innerHTML += `
                 <div class="tarjeta">
-                    <h3>${datos[id].concepto}</h3>
-                    <p>${datos[id].definicion}</p>
-                    <button onclick="prepararEdicion('${id}','${datos[id].concepto}','${datos[id].definicion}')">Editar</button>
-                    <button onclick="eliminar('${id}')">Eliminar</button>
-                </div>
+        <h3>${datos[id].concepto}</h3>
+        <p>${datos[id].definicion}</p>
+                <button type="button" onclick="prepararEdicion('${id}','${datos[id].concepto.replace(/'/g, "\\'")}','${datos[id].definicion.replace(/'/g, "\\'")}', '${refsString}')">
+                    Editar
+                </button>
+                
+                <button type="button" onclick="eliminar('${id}')">
+                    Eliminar
+                </button>
+            </div>
             `;
         }
     }
 });
 
-window.prepararEdicion = (id, concepto, definicion) => {
+// Preparar edición (ACTUALIZADO PARA CARGAR REFERENCIAS)
+window.prepararEdicion = (id, concepto, definicion, refsString) => {
     document.getElementById('concepto').value = concepto;
     document.getElementById('definicion').value = definicion;
+
+    // Limpiamos referencias previas en el formulario
+    const container = document.getElementById('referencias-container');
+    container.innerHTML = '';
+
+    // Decodificamos y cargamos las referencias existentes
+    const referencias = JSON.parse(decodeURIComponent(refsString));
+    referencias.forEach(ref => {
+        agregarCampoReferencia(ref.nombre, ref.url);
+    });
+
     document.getElementById('btn-guardar').innerText = "Actualizar Cambios";
     document.getElementById('btn-cancelar').style.display = "inline-block";
     editandoId = id;
@@ -127,6 +173,7 @@ window.prepararEdicion = (id, concepto, definicion) => {
 
 window.cancelarEdicion = () => {
     formulario.reset();
+    document.getElementById('referencias-container').innerHTML = ''; // Limpiar referencias al cancelar
     document.getElementById('btn-guardar').innerText = "Guardar Término";
     document.getElementById('btn-cancelar').style.display = "none";
     editandoId = null;
@@ -137,7 +184,7 @@ window.eliminar = async (id) => {
         try {
             await db_eliminarTermino(id);
         } catch (error) {
-            alert("Error al eliminar. Asegúrate de tener sesión iniciada.");
+            alert("Error al eliminar.");
         }
     }
 };

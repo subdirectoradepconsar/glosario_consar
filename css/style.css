@@ -38,7 +38,7 @@ main {
     padding: 5px 0;
 }
 #gobiernoDeMexico {
-    max-width: 220px; /* Tamaño adecuado para el logo */
+    max-width: 220px;
     padding: 10px 20px;
     height: auto;
 }
@@ -294,3 +294,4 @@ html {
     color: #333;               /* X más oscura */
     transform: scale(1.1);     /* Crece un poquito */
 }
+
