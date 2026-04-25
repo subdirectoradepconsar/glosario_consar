@@ -39,7 +39,7 @@ main {
 }
 #gobiernoDeMexico {
     max-width: 220px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     height: auto;
 }
 
@@ -196,7 +196,7 @@ main {
 footer {
     text-align: center;
     padding: 40px 20px;
-    background-color: #004b40;
+    background-color: var(--colorIntitucional);
     color: white;
     margin-top: 50px;
 }
@@ -295,3 +295,87 @@ html {
     transform: scale(1.1);     /* Crece un poquito */
 }
 
+/* Boton de volver arriba */
+.btn-gob-neutral {
+  /* Anclaje fijo */
+  position: fixed;
+  bottom: 250px;
+  right: 20px;
+  z-index: 1000;
+
+  /* Estilo visual gob.mx */
+  background-color: white; /* Color neutral */
+  color: #888;
+  border: 1px solid #888;
+  padding: 10px 20px;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+  /* Sin bordes redondeados pronunciados */
+  border-radius: 0; 
+  transition: background-color 0.3s ease;
+}
+
+.btn-gob-neutral:hover {
+  background-color: #333333; /* Oscurecimiento al pasar el cursor */
+  border-color: #333333;
+  color: white;
+
+}
+
+/* Indicador visual de navegacion barra de busqueda */
+.suggestions-list li.selected {
+    background-color: #f0f0f0; /* Color de fondo cuando seleccionas con teclado */
+    font-weight: bold;
+}
+
+/* Forms */
+/* Estilo del Toast */
+.toast {
+    position: fixed; bottom: 20px; right: 20px;
+    background: #333; color: white; padding: 15px 25px;
+    border-radius: 5px; z-index: 9999; animation: fadeIn 0.5s;
+}
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+/* Modal admin */
+#modal-admin {
+    display: none; /* Oculto por defecto */
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 1000;
+}
+/* Contenedor del Modal */
+#modal-admin {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); /* Fondo oscuro semitransparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja blanca del formulario */
+.modal-contenido {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    max-height: 90vh; /* Para que no sea más grande que la pantalla */
+    overflow-y: auto; /* Scroll si el formulario es muy largo */
+}
+
+/* Botón de cerrar X */
+.cerrar-modal {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}

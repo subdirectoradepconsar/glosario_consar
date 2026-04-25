@@ -1,5 +1,6 @@
 // Estado local para búsqueda rápida
 let conceptosIndex = [];
+let selectedIndex = -1; 
 
 // 1. Elementos del DOM
 const inputBusqueda = document.getElementById('search-input');
@@ -104,10 +105,30 @@ const ejecutarBusqueda = debounce((texto) => {
 // 5. Escuchar el evento de escritura
 if (inputBusqueda) {
     inputBusqueda.addEventListener('input', (e) => ejecutarBusqueda(e.target.value));
+    inputBusqueda.addEventListener('keydown', (e) => {
+    const items = document.querySelectorAll('.suggestions-list li');
+        if (items.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex + 1) % items.length;
+            actualizarSeleccion(items);
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+            actualizarSeleccion(items);
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (selectedIndex >= 0 && items[selectedIndex]) {
+                items[selectedIndex].click();
+            }
+        }
+    });
 }
 
 // 6. Mostrar sugerencias flotantes
 function mostrarSugerencias(lista) {
+    selectedIndex = -1;
     if (!searchResults) return;
 
     if (lista.length === 0) {
@@ -185,5 +206,22 @@ window.cargarDefinicion = (id) => {
         }
     });
 };
-// Iniciar proceso
+// Cierra el modal al presionar la tecla ESC
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        const modal = document.getElementById('modal-termino');
+        if (modal && modal.innerHTML !== '') {
+            modal.innerHTML = ''; // Limpia el modal igual que tu botón de cerrar
+        }
+    }
+});
+
+function actualizarSeleccion(items) {
+    items.forEach(li => li.classList.remove('selected'));
+    if (selectedIndex >= 0) {
+        items[selectedIndex].classList.add('selected');
+        items[selectedIndex].scrollIntoView({ block: 'nearest' });
+    }
+}
+
 cargarIndice();
