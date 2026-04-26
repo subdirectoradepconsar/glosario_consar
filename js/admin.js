@@ -28,6 +28,21 @@ window.handleLogout = () => {
         firebase.auth().signOut();
     }
 };
+// Permitir el login presionando la tecla "Enter"
+const camposLogin = [
+    document.getElementById('admin-email'), 
+    document.getElementById('admin-password')
+];
+
+camposLogin.forEach(campo => {
+    campo.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            // Prevenir comportamiento por defecto y ejecutar el login
+            event.preventDefault();
+            window.handleLogin();
+        }
+    });
+});
 
 // --- SECCIÓN DE GESTIÓN DEL GLOSARIO ---
 

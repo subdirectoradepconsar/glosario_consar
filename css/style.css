@@ -1,16 +1,8 @@
 html {
     scroll-behavior: smooth;
-    /* proximity es la clave: el navegador solo 'engancha' si estás cerca 
-       de un punto de anclaje, permitiendo scroll natural el resto del tiempo */
     scroll-snap-type: y proximity; 
 }
 
-/* Aplica esto a las secciones que quieres que se "enganchen" (por ejemplo, las de cada letra) */
-.letra-seccion {
-    scroll-snap-align: start;
-    /* Opcional: un margen superior para que no quede pegado al borde */
-    scroll-margin-top: 100px; 
-}
 :root {
     --fuente_principal: "Noto Sans", sans-serif;
     /* Colores primarios */
@@ -272,9 +264,9 @@ html {
 }
 .btn-save {
     width: 250px;
-    height: 50px;
+    height: 40px;
     justify-self: center;
-    font-size: 20px;
+    font-size: 15px;
 
     cursor: pointer;
     transition: all 0.2s ease;
@@ -283,7 +275,6 @@ html {
 .btn-save:hover {
     background-color: #e0e0e0; /* Fondo un poco más oscuro */
     color: #333;               /* X más oscura */
-    transform: scale(1.1);     /* Crece un poquito */
 }
 
 /* Boton targeta */
