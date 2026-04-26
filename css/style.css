@@ -331,13 +331,11 @@ html {
     transform: scale(1.1);     /* Crece un poquito */
 }
 
-
-
 /* Boton de volver arriba */
 .btn-gob-neutral {
   /* Anclaje fijo */
   position: fixed;
-  bottom: 260px;
+  bottom: 100px;
   right: 20px;
   z-index: 1000;
 
@@ -359,7 +357,7 @@ html {
 @media (min-width: 768px) {
     .btn-gob-neutral {
     font-size: 20px;
-    bottom: 500px;
+    bottom: 250px;
     right: 30px;
 
     }
@@ -368,7 +366,11 @@ html {
   background-color: #333333; /* Oscurecimiento al pasar el cursor */
   border-color: #333333;
   color: white;
-
+}
+.btn-gob-neutral.en-footer {
+    position: absolute;
+    bottom: 20px; /* Aquí ajustas qué tan arriba del footer quieres que quede */
+    /* Mantenemos el resto de estilos igual */
 }
 
 /* Indicador visual de navegacion barra de busqueda */
