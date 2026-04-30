@@ -5,7 +5,6 @@ html {
 
 :root {
     --fuente_principal: "Noto Sans", sans-serif;
-    /* Colores primarios */
     --primario_verde: rgb(39, 199, 39);
     --primario_azulfuerte: rgb(21, 30, 207);
     --primario_azulclaro: rgb(0, 162, 255);
@@ -30,23 +29,24 @@ main {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos hijos horizontalmente */
+    align-items: center;
 }
 
-/* Header Institucional */
 #header {
-    background-color: var(--colorIntitucional); /* Color Guinda oficial */
+    background-color: var(--colorIntitucional);
     width: 100%;
-    border-bottom: 2px solid var(--colorIntitucional); /* Acento de color institucional */
+    border-bottom: 2px solid var(--colorIntitucional);
     display: flex;
     align-items: center;
     padding: 5px 0;
 }
+
 #gobiernoDeMexico {
     max-width: 150px;
     height: auto;
     padding: 10px 30px;
 }
+
 #logo_consar {
     max-width: 60px;
 }
@@ -60,12 +60,11 @@ main {
     }
 }
 
-/* --- Barra de Búsqueda (Actualizada y consolidada) --- */
 .search-box {
-    position: relative; /* Necesario para que las sugerencias se posicionen bien */
+    position: relative;
     width: 100%;
-    max-width: 500px;   /* Tamaño ideal para buscador */
-    margin: 0 auto;     /* Centrado horizontal */
+    max-width: 500px;
+    margin: 0 auto;
     margin-bottom: 20px;
 }
 
@@ -78,14 +77,13 @@ main {
     outline: none;
     transition: border-color 0.3s;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+    box-sizing: border-box;
 }
 
 .search-box input:focus {
-    border-color: #d4af37; /* Dorado al enfocar */
+    border-color: #d4af37;
 }
 
-/* Sugerencias flotantes */
 .search-suggestions {
     position: absolute;
     top: 100%;
@@ -117,7 +115,6 @@ main {
     color: #004b40;
 }
 
-/* --- Abecedario --- */
 .lista_nav {
     display: flex;
     flex-wrap: wrap;
@@ -143,16 +140,14 @@ main {
     transform: scale(1.2);
 }
 
-/* Estilo para letras sin contenido */
 .letra-inactiva {
-    color: #611232 !important; /* Tu color institucional */
-    opacity: 0.4;              /* Un poco transparente para indicar que no hay contenido */
+    color: var(--colorIntitucional) !important;
+    opacity: 0.4;
     cursor: default !important;
-    pointer-events: none;      /* Desactiva el clic */
+    pointer-events: none;
     text-decoration: none;
 }
 
-/* --- Títulos --- */
 .titulo h1 {
     font-size: 2.5rem;
     color: #004b40;
@@ -166,7 +161,6 @@ main {
     margin-bottom: 20px;
 }
 
-/* --- Contenedor de Resultados --- */
 #glossary-container {
     width: 100%;
     display: flex;
@@ -209,7 +203,6 @@ main {
     font-weight: bold;
 }
 
-/* --- Footer --- */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -234,7 +227,6 @@ footer {
     transform: translateY(-5px);
 }
 
-/* --- Modal/Tarjeta Emergente --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -270,8 +262,8 @@ html {
 
 .form-login {
     display: grid;
-
 }
+
 .btn-save {
     width: 250px;
     height: 40px;
@@ -283,64 +275,49 @@ html {
     z-index: 1010; 
 }
 .btn-save:hover {
-    background-color: #e0e0e0; /* Fondo un poco más oscuro */
-    color: #333;               /* X más oscura */
+    background-color: #e0e0e0;
+    color: #333;
 }
 
-/* Boton targeta */
-/* 1. ESTO ES CRUCIAL: El contenedor blanco debe ser relativo */
 .detalle-card {
-    /* ... (mantén tus estilos actuales de padding, background, etc.) ... */
-    position: relative; /* ¡NUEVO! Esto le dice a la X: "anclate a mis esquinas" */
+    position: relative;
 }
 
-/* 2. REDISEÑO COMPLETO DE LA X */
 .btn-cerrar {
-    position: absolute; /* Lo saca del flujo y lo ancla */
-    top: 15px;          /* Distancia desde el borde superior blanco */
-    right: 15px;        /* Distancia desde el borde derecho blanco */
-    
-    /* Diseño del botón circular */
+    position: absolute;
+    top: 15px;
+    right: 15px;
     width: 32px;
     height: 32px;
-    background-color: #f1f1f1; /* Fondo gris muy suave */
+    background-color: #f1f1f1;
     border: none;
-    border-radius: 50%; /* Lo hace un círculo perfecto */
-    
-    /* Diseño de la 'X' dentro del círculo */
-    color: #666;        /* Color gris suave */
-    font-size: 20px;    /* Tamaño de la X */
+    border-radius: 50%;
+    /* x */
+    color: #666;
+    font-size: 20px;
     font-weight: bold;
-    font-family: Arial, sans-serif; /* Fuente limpia para el símbolo */
-    
-    /* Centrado perfecto de la X */
+    font-family: Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* Interactividad */
+
     cursor: pointer;
     transition: all 0.2s ease;
-    z-index: 1010; /* Asegura que esté por encima de todo en la tarjeta */
+    z-index: 1010;
 }
 
-/* Efecto al pasar el mouse */
 .btn-cerrar:hover {
-    background-color: #e0e0e0; /* Fondo un poco más oscuro */
-    color: #333;               /* X más oscura */
-    transform: scale(1.1);     /* Crece un poquito */
+    background-color: #e0e0e0;
+    color: #333;
+    transform: scale(1.1);
 }
 
-/* Boton de volver arriba */
 .btn-gob-neutral {
-  /* Anclaje fijo */
   position: fixed;
   bottom: 100px;
   right: 20px;
   z-index: 1000;
-
-  /* Estilo visual gob.mx */
-  background-color: white; /* Color neutral */
+  background-color: white;
   color: #888;
   border: 1px solid #888;
   padding: 10px 30px;
@@ -349,9 +326,7 @@ html {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  
-  /* Sin bordes redondeados pronunciados */
-  border-radius: 0; 
+  border-radius: 0.5rem; 
   transition: background-color 0.3s ease;
 }
 @media (min-width: 768px) {
@@ -362,25 +337,23 @@ html {
 
     }
 }
+
 .btn-gob-neutral:hover {
-  background-color: #333333; /* Oscurecimiento al pasar el cursor */
+  background-color: #333333;
   border-color: #333333;
   color: white;
 }
+
 .btn-gob-neutral.en-footer {
     position: absolute;
-    bottom: 20px; /* Aquí ajustas qué tan arriba del footer quieres que quede */
-    /* Mantenemos el resto de estilos igual */
+    bottom: 20px;
 }
 
-/* Indicador visual de navegacion barra de busqueda */
 .suggestions-list li.selected {
-    background-color: #f0f0f0; /* Color de fondo cuando seleccionas con teclado */
+    background-color: #f0f0f0;
     font-weight: bold;
 }
 
-/* Forms */
-/* Estilo del Toast */
 .toast {
     position: fixed; bottom: 20px; right: 20px;
     background: #333; color: white; padding: 15px 25px;
@@ -388,25 +361,23 @@ html {
 }
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
-/* Modal admin */
 #modal-admin {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 1000;
 }
-/* Contenedor del Modal */
+
 #modal-admin {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6); /* Fondo oscuro semitransparente */
+    background: rgba(0,0,0,0.6);
     z-index: 1000;
     justify-content: center;
     align-items: center;
 }
 
-/* Caja blanca del formulario */
 .modal-contenido {
     background: white;
     padding: 25px;
@@ -414,11 +385,10 @@ html {
     width: 90%;
     max-width: 500px;
     position: relative;
-    max-height: 90vh; /* Para que no sea más grande que la pantalla */
-    overflow-y: auto; /* Scroll si el formulario es muy largo */
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-/* Botón de cerrar X */
 .cerrar-modal {
     position: absolute;
     top: 10px; right: 15px;

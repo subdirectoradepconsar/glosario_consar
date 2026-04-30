@@ -15,7 +15,9 @@
             src="https://www.gob.mx/resources/img/logo_gob_mx.png?pfdrid_c=false&uid=578f241b-8ab9-4d44-a04b-80a5600c7a53"
             alt="gobierno de méxico">
     </header>
+
     <main>
+        <!-- SECCIÓN DE LOGIN -->
         <section id="login-section" class="form-container" style="margin-top: 50px;">
             <div class="titulo" style="text-align: center; border: none;">
                 <h1>Acceso Administrativo</h1>
@@ -26,72 +28,74 @@
                     style="width:100%; margin-bottom:10px; padding:10px;">
                 <input type="password" id="admin-password" placeholder="Contraseña"
                     style="width:100%; margin-bottom:10px; padding:10px;">
-                <button onclick="handleLogin()" class="btn-save" >Ingresar</button>
+                <button onclick="handleLogin()" class="btn-save">Ingresar</button>
             </div>
         </section>
 
+        <!-- PANEL DE ADMINISTRACIÓN -->
         <section id="admin-panel" style="display: none;">
             <div class="titulo">
                 <h1>Panel de Administración</h1>
                 <button onclick="handleLogout()"
-                    style="background:#cccccc; font-size: 0.8rem; padding: 5px 15px; float: right;">Cerrar
-                    Sesión</button>
+                    style="background:#cccccc; font-size: 0.8rem; padding: 5px 15px; float: right;">
+                    Cerrar Sesión
+                </button>
             </div>
 
             <input type="text" id="admin-search" placeholder="Buscar término para editar..."
                 style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
 
-            <form id="formulario-glosario" class="form-container">
-                <button onclick="abrirModal()"
-                    style="padding: 10px 20px; margin-bottom: 20px; background: #611232; color: white; border: none; cursor: pointer;">
-                    + Agregar Nuevo Término
-                </button>
+            <button type="button" onclick="abrirModal()"
+                style="padding: 10px 20px; margin-bottom: 20px; background: #611232; color: white; border: none; cursor: pointer;">
+                + Agregar Nuevo Término
+            </button>
 
-                <div id="modal-admin">
-                    <div class="modal-contenido">
-                        <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <!-- MODAL ÚNICO -->
+            <div id="modal-admin" style="display: none;">
+                <div class="modal-contenido">
+                    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
 
-                        <form id="formulario-glosario" class="form-container">
-                            <h3>Administrar Término</h3>
-                            <div class="campo">
-                                <label for="concepto">Concepto: </label>
-                                <input type="text" id="concepto" placeholder="Escribe el concepto..." required>
-                            </div>
-                            <div class="campo" style="margin-top:15px;">
-                                <label for="definicion">Definición: </label>
-                                <textarea id="definicion" placeholder="Escribe la definición aquí..."
-                                    rows="5"></textarea>
-                            </div>
-                            <div class="campo" style="margin-top:20px;">
-                                <label>Referencias (Enlaces): </label>
-                                <div id="referencias-container"></div>
-                                <button type="button" onclick="agregarCampoReferencia()"
-                                    style="margin-top:10px; background: #611232; color: white; border: none; padding: 5px 10px; cursor: pointer;">
-                                    + Agregar Referencia
-                                </button>
-                            </div>
-                            <div style="margin-top:20px; display: flex; gap: 10px;">
-                                <button type="submit" id="btn-guardar" class="btn-save">Guardar Término</button>
-                                <button type="button" id="btn-cancelar" onclick="cerrarModal()"
-                                    style="background:#888; display:none;">Cancelar</button>
-                            </div>
-                        </form>
-                    </div>
+                    <form id="formulario-glosario" class="form-container">
+                        <h3>Administrar Término</h3>
+                        <div class="campo">
+                            <label for="concepto">Concepto: </label>
+                            <input type="text" id="concepto" placeholder="Escribe el concepto..." required>
+                        </div>
+                        <div class="campo" style="margin-top:15px;">
+                            <label for="definicion">Definición: </label>
+                            <textarea id="definicion" placeholder="Escribe la definición aquí..." rows="5"></textarea>
+                        </div>
+                        <div class="campo" style="margin-top:20px;">
+                            <label>Referencias (Enlaces): </label>
+                            <div id="referencias-container"></div>
+                            <button type="button" onclick="agregarCampoReferencia()"
+                                style="margin-top:10px; background: #611232; color: white; border: none; padding: 5px 10px; cursor: pointer;">
+                                + Agregar Referencia
+                            </button>
+                        </div>
+                        <div style="margin-top:20px; display: flex; gap: 10px;">
+                            <button type="submit" id="btn-guardar" class="btn-save">Guardar Término</button>
+                            <button type="button" id="btn-cancelar" onclick="cerrarModal()"
+                                style="background:#888; display:none;">Cancelar</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
 
             <hr>
-            <div id="contenedor-terminos">
-            </div>
+            <div id="contenedor-terminos"></div>
         </section>
     </main>
 
+    <!-- Scripts -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 
-    <script src="js/database.js"></script>
-    <script src="js/admin.js"></script>
+    <script src="js/models/glossaryModel.js"></script>
+    <script src="js/views/adminView.js"></script>
+    <script src="js/views/components/btn_subir.js"></script>
+    <script src="js/controllers/adminController.js"></script>
 </body>
 
 </html>
