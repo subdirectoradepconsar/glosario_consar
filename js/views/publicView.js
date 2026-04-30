@@ -1,14 +1,9 @@
-// --- VISTA PÚBLICA: RENDERIZADO DEL DICCIONARIO ---
-
 const publicView = {
     glossaryContainer: document.getElementById('glossary-container'),
     searchResults: document.getElementById('search-results'),
 
-    // Renderiza el diccionario A-Z
     renderDiccionario: (terminos) => {
         if (!publicView.glossaryContainer) return;
-        
-        // Ordenar alfabéticamente
         terminos.sort((a, b) => a.nombre.localeCompare(b.nombre));
 
         const grupos = {};
@@ -37,7 +32,6 @@ const publicView = {
         publicView.actualizarNavAbecedario(grupos);
     },
 
-    // Pinta de gris las letras sin términos en el menú
     actualizarNavAbecedario: (grupos) => {
         const linksNavegacion = document.querySelectorAll('.lista_nav li a');
         linksNavegacion.forEach(link => {
@@ -50,7 +44,6 @@ const publicView = {
         });
     },
 
-    // Muestra la lista flotante del buscador
     mostrarSugerencias: (lista) => {
         if (!publicView.searchResults) return;
         if (lista.length === 0) {
@@ -64,7 +57,6 @@ const publicView = {
         `;
     },
 
-    // Renderiza el modal con la definición y referencias
     mostrarModalDefinicion: (data) => {
         let modal = document.getElementById('modal-termino');
         if (!modal) {

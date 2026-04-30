@@ -1,4 +1,3 @@
-// --- VISTA: MANIPULACIÓN DEL DOM ---
 const adminView = {
     formulario: document.getElementById('formulario-glosario'),
     contenedor: document.getElementById('contenedor-terminos'),
@@ -17,7 +16,6 @@ const adminView = {
 
     getFormData: () => {
         const referencias = [];
-        // IMPORTANTE: Buscamos cada grupo de inputs creado
         const grupos = document.querySelectorAll('.ref-input-group');
         
         grupos.forEach(grupo => {
@@ -35,7 +33,7 @@ const adminView = {
         return {
             concepto: document.getElementById('concepto').value.trim(),
             definicion: document.getElementById('definicion').value.trim(),
-            referencias: referencias // Este array ahora sí llevará los datos
+            referencias: referencias
         };
     },
 
@@ -72,7 +70,6 @@ const adminView = {
         if (datos) {
             for (let id in datos) {
                 const item = datos[id];
-                // Aseguramos que referencias sea siempre un array para evitar errores de JSON
                 const refsArray = item.referencias || [];
                 const refsString = encodeURIComponent(JSON.stringify(refsArray));
                 

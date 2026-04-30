@@ -1,24 +1,15 @@
-// --- CONTROLADOR: CEREBRO DE LA APLICACIÓN ---
 let editandoId = null;
 
-/**
- * 1. Observador de Autenticación
- * Controla qué sección ve el usuario basándose en el estado de Firebase.
- */
 firebase.auth().onAuthStateChanged((user) => {
     adminView.toggleAuthScreens(user);
     if (user) {
-        // Carga inicial de datos al estar logueado
+        
         db_obtenerTerminos((datos) => {
             adminView.renderizarTarjetas(datos);
         });
     }
 });
 
-/**
- * 2. Funciones Globales para HTML (onclick)
- * Exponemos estas funciones al objeto window para que los "onclick" del HTML las encuentren.
- */
 window.handleLogin = async () => {
     const email = document.getElementById('admin-email').value;
     const pass = document.getElementById('admin-password').value;
@@ -36,7 +27,7 @@ window.handleLogout = () => {
 };
 
 window.abrirModal = () => {
-    editandoId = null; // Reset para asegurar que es un nuevo término
+    editandoId = null;
     adminView.limpiarFormulario();
     adminView.abrirModal();
 };
@@ -45,16 +36,11 @@ window.cerrarModal = () => {
     adminView.cerrarModal();
 };
 
-/**
- * IMPORTANTE: Sincronizado con adminView.getFormData
- * Esta función crea la estructura que la vista necesita para recolectar datos.
- */
 window.agregarCampoReferencia = (nombre = '', url = '') => {
     const container = document.getElementById('referencias-container');
     if (!container) return;
 
     const div = document.createElement('div');
-    // CLAVE: "ref-input-group" es la clase que busca la vista
     div.className = 'ref-input-group'; 
     div.style.cssText = 'display: flex; gap: 10px; margin-bottom: 10px;';
     
@@ -66,9 +52,6 @@ window.agregarCampoReferencia = (nombre = '', url = '') => {
     container.appendChild(div);
 };
 
-/**
- * 3. Manejo del Formulario (Guardar/Actualizar)
- */
 adminView.formulario?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const btnGuardar = document.getElementById('btn-guardar');
@@ -78,7 +61,6 @@ adminView.formulario?.addEventListener('submit', async (e) => {
     btnGuardar.innerText = "Procesando...";
 
     try {
-        // Obtenemos los datos ya procesados por la vista (incluyendo el array de referencias)
         const datos = adminView.getFormData();
         
         if (editandoId) {
@@ -99,17 +81,13 @@ adminView.formulario?.addEventListener('submit', async (e) => {
     }
 });
 
-/**
- * 4. Funciones de Edición y Eliminación (Desde Tarjetas)
- */
 window.prepararEdicion = (id, concepto, definicion, refsString) => {
-    // Limpieza previa necesaria
+    
     adminView.limpiarFormulario();
 
     document.getElementById('concepto').value = concepto;
     document.getElementById('definicion').value = definicion;
     
-    // Poblar referencias dinámicamente
     try {
         const referencias = JSON.parse(decodeURIComponent(refsString));
         if (Array.isArray(referencias)) {
@@ -119,7 +97,6 @@ window.prepararEdicion = (id, concepto, definicion, refsString) => {
         console.error("Error al procesar referencias en edición:", e);
     }
 
-    // Actualizar interfaz para modo edición
     const btnGuardar = document.getElementById('btn-guardar');
     const btnCancelar = document.getElementById('btn-cancelar');
     
@@ -141,9 +118,6 @@ window.eliminar = async (id) => {
     }
 };
 
-/**
- * 5. Utilidades (Buscador)
- */
 document.getElementById('admin-search')?.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase();
     const tarjetas = document.querySelectorAll('.tarjeta');

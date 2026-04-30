@@ -1,4 +1,3 @@
-// --- CONFIGURACIÓN DE FIREBASE ---
 const firebaseConfig = {
     apiKey: "AIzaSyCBEcgyGMC_NkSms-NeKq1H0FMpOWYbkQI",
     authDomain: "diccionario-consar.firebaseapp.com",
@@ -9,15 +8,10 @@ const firebaseConfig = {
     appId: "1:440062937021:web:c78f6309f79c228d12f4d4"
 };
 
-// Inicialización
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 const db = firebase.database();
-
-// --- OPERACIONES DE BASE DE DATOS (CRUD) ---
-
-// Guardar (Create)
 const db_guardarTermino = async (objetoData) => {
     return db.ref('glosario').push(objetoData);
 };
@@ -39,8 +33,6 @@ const db_eliminarTermino = async (id) => {
 const db_actualizarTermino = async (id, nuevosDatos) => {
     return db.ref(`glosario/${id}`).update(nuevosDatos);
 };
-
-// --- LÓGICA DE NEGOCIO Y AUTH (MODELO) ---
 
 async function esDuplicado(concepto, idActual) {
     const snapshot = await db.ref('glosario').once('value');
