@@ -73,3 +73,52 @@ function debounce(func, wait) {
         timeout = setTimeout(() => func(...args), wait);
     };
 }
+
+window.toggleLectura = () => {
+    const synth = window.speechSynthesis;
+    const textoEl = document.getElementById('texto-definicion');
+    const btnEscuchar = document.getElementById('btn-escuchar');
+
+    if (!textoEl) return;
+
+    if (synth.speaking) {
+        if (synth.paused) {
+            synth.resume();
+            btnEscuchar.innerHTML = "⏸ Pausar";
+        } else {
+            synth.pause();
+            btnEscuchar.innerHTML = "▶️ Reanudar";
+        }
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(textoEl.innerText);
+    utterance.lang = 'es-MX';
+    utterance.rate = 1.0;
+
+    const voces = synth.getVoices();
+    const vozOptima = voces.find(v => v.lang === 'es-MX' && (v.name.includes('Google') || v.name.includes('Premium')))
+                   || voces.find(v => v.lang === 'es-MX')
+                   || voces.find(v => v.lang.startsWith('es'));
+
+    if (vozOptima) {
+        utterance.voice = vozOptima;
+    }
+
+    utterance.onend = () => {
+        btnEscuchar.innerHTML = "🔊 Escuchar";
+    };
+
+    utterance.onerror = () => {
+        btnEscuchar.innerHTML = "🔊 Escuchar";
+    };
+
+    synth.speak(utterance);
+    btnEscuchar.innerHTML = "⏸ Pausar";
+};
+
+if ('speechSynthesis' in window) {
+    window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+    };
+}

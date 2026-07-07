@@ -82,21 +82,25 @@ const publicView = {
 
         modal.innerHTML = `
             <div class="modal-overlay">
-                <div class="detalle-card">
-                    <button class="btn-cerrar" onclick="publicView.cerrarModal()">×</button>
-                    <div class="modal-header"><h2>${data.concepto}</h2></div>
-                    <hr>
-                    <div class="modal-body">
-                        <p>${data.definicion}</p>
-                        ${htmlReferencias} 
-                    </div>
+            <div class="detalle-card">
+                <button class="btn-cerrar" onclick="publicView.cerrarModal()">×</button>
+                <div class="modal-header"><h2>${data.concepto}</h2></div>
+                <hr>
+                <div class="modal-body">
+                    <button id="btn-escuchar" onclick="toggleLectura()" class="btn-gob-neutral" style="margin-bottom: 15px; padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px;">🔊 Escuchar</button>
+                    <p id="texto-definicion">${data.definicion}</p>
+                    ${htmlReferencias} 
                 </div>
             </div>
-        `;
+        </div>
+    `;
     },
 
     cerrarModal: () => {
         const modal = document.getElementById('modal-termino');
         if (modal) modal.innerHTML = '';
+        if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
     }
 };
