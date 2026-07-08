@@ -13,7 +13,7 @@ db_obtenerTerminos((data) => {
 
 const ejecutarBusqueda = debounce((texto) => {
     const query = texto.toLowerCase().trim();
-    if (query.length < 2) {
+    if (query.length < 1) {
         if (publicView.searchResults) publicView.searchResults.innerHTML = "";
         return;
     }
@@ -21,7 +21,7 @@ const ejecutarBusqueda = debounce((texto) => {
         item.nombre && item.nombre.toLowerCase().includes(query)
     );
     publicView.mostrarSugerencias(resultados);
-}, 300);
+}, 200);
 
 const inputBusqueda = document.getElementById('search-input');
 if (inputBusqueda) {
@@ -136,6 +136,10 @@ window.cambiarTamanoTexto = (cambio) => {
     // Aplicamos el nuevo tamaño y aseguramos la legibilidad del interlineado
     textoEl.style.setProperty('font-size', nuevoTamano + 'px', 'important');
     textoEl.style.setProperty('line-height', '1.6', 'important');
+};
+
+const normalizar = (texto) => {
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 };
 
 }
