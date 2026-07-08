@@ -121,4 +121,22 @@ if ('speechSynthesis' in window) {
     window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();
     };
+
+window.cambiarTamanoTexto = (cambio) => {
+    const textoEl = document.getElementById('texto-definicion');
+    if (!textoEl) return;
+
+    // Obtenemos el tamaño actual calculado por el navegador
+    const estiloActual = window.getComputedStyle(textoEl, null).getPropertyValue('font-size');
+    const tamanoActual = parseFloat(estiloActual);
+
+    // Calculamos el nuevo tamaño
+    const nuevoTamano = tamanoActual + cambio;
+
+    // Aplicamos el nuevo tamaño y aseguramos la legibilidad del interlineado
+    textoEl.style.setProperty('font-size', nuevoTamano + 'px', 'important');
+    textoEl.style.setProperty('line-height', '1.6', 'important');
+};
+
 }
+
