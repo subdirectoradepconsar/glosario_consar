@@ -164,14 +164,55 @@ const normalizar = (texto) => {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 };
 
-// Función global que usará la vista para encontrar las referencias automatizadas
+// Versión definitiva: Relaciona conceptos compuestos de forma exacta y limita la pantalla a max 3 elementos
 window.obtenerTerminosRelacionados = (textoDefinicion, conceptoActual) => {
     if (!textoDefinicion || conceptosIndex.length === 0) return [];
-    const textoNormalizado = normalizar(textoDefinicion);
     
-    return conceptosIndex.filter(item => {
-        if (item.nombre === conceptoActual) return false;
+    const textoNormalizado = normalizar(textoDefinicion);
+    const resultados = [];
+    
+    for (const item of conceptosIndex) {
+        // 1. Evitamos auto-recomendarse
+        if (item.nombre === conceptoActual) continue;
+        
         const nombreNormalizado = normalizar(item.nombre);
-        return nombreNormalizado.length > 2 && textoNormalizado.includes(nombreNormalizado);
+        if (nombreNormalizado.length <= 2) continue;
+
+        // CASO A: El concepto exacto aparece en el texto
+        if (textoNormalizado.includes(nombreNormalizado)) {
+            resultados.push(item);
+            continue;
+        }
+
+        // CASO B: Si el concepto es compuesto (ej: "Pensión Garantizada"), 
+        // revisamos si su primera palabra (ej: "Pensión") aparece como palabra independiente en el texto
+        const palabrasConcepto = nombreNormalizado.split(/\s+/);
+        if (palabrasConcepto.length > 1) {
+            const primeraPalabra = palabrasConcepto[0];
+            
+            // Filtramos palabras de enlace comunes que no dicen nada (de, para, sobre, cuenta, monto)
+            const palabrasBasura = ['cuenta', 'monto', 'plazo', 'sobre', 'sistema', 'pago'];
+            if (primeraPalabra.length > 4 && !palabrasBasura.includes(primeraPalabra)) {
+                
+                // \b asegura que busque la palabra completa (ej: "pension" y no "pensiones" o dentro de otra)
+                const reglaPalabraExacta = new RegExp(`\\b${primeraPalabra}\\b`, 'i');
+                if (reglaPalabraExacta.test(textoNormalizado)) {
+                    resultados.push(item);
+                }
+            }
+        }
+    }
+
+    // 2. CORTE DE SEGURIDAD: Eliminamos duplicados y limitamos a máximo 3 sugerencias en pantalla
+    const IDsUnicos = new Set();
+    const resultadosFiltrados = resultados.filter(item => {
+        if (!IDsUnicos.has(item.id)) {
+            IDsUnicos.add(item.id);
+            return true;
+        }
+        return false;
     });
+
+    // Retorna solo los primeros 3 para mantener la interfaz limpia y estética
+    return resultadosFiltrados.slice(0, 3);
 };
