@@ -80,6 +80,28 @@ const publicView = {
             `;
         }
 
+        // Búsqueda automática de conceptos relacionados en la definición
+        const relacionados = window.obtenerTerminosRelacionados ? window.obtenerTerminosRelacionados(data.definicion, data.concepto) : [];
+        let htmlRelacionados = '';
+
+        if (relacionados.length > 0) {
+            htmlRelacionados = `
+                <div class="referencias-automatizadas" style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #eee; text-align: left;">
+                    <p style="font-weight: bold; margin-bottom: 10px; color: #555; font-size: 0.95em;">También te puede interesar:</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        ${relacionados.map(termino => `
+                            <button 
+                                onclick="seleccionarTermino('${termino.id}')" 
+                                style="background-color: #f0f4f8; color: #1a56db; border: none; padding: 6px 14px; border-radius: 16px; cursor: pointer; font-size: 0.85em; font-weight: 500; transition: all 0.2s;"
+                                onmouseover="this.style.backgroundColor='#e1e8f5'" 
+                                onmouseout="this.style.backgroundColor='#f0f4f8'">
+                                ${termino.nombre}
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
 
         modal.innerHTML = `
         <div class="modal-overlay">
@@ -90,11 +112,8 @@ const publicView = {
                 <div class="modal-body">
                     
                     <div style="display: flex; justify-content: flex-end; gap: 15px; margin-bottom: 20px;">
-                        
                         <button onclick="cambiarTamanoTexto(-2)" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important; padding: 6px 15px !important; cursor: pointer !important; border: 1px solid #666 !important; border-radius: 4px !important; font-weight: bold !important; font-size: 14px !important; background-color: #f8f9fa !important; color: #333 !important;">a -</button>
-                        
                         <button onclick="cambiarTamanoTexto(2)" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important; padding: 6px 15px !important; cursor: pointer !important; border: 1px solid #666 !important; border-radius: 4px !important; font-weight: bold !important; font-size: 18px !important; background-color: #f8f9fa !important; color: #333 !important;">A +</button>
-                    
                     </div>
 
                     <p id="texto-definicion">${data.definicion}</p>
@@ -102,6 +121,8 @@ const publicView = {
                     <div style="display: block !important; text-align: center !important; width: 100% !important; margin-top: 25px !important; margin-bottom: 15px !important;">
                         <button id="btn-escuchar" onclick="toggleLectura()" class="btn-gob-neutral" style="position: static !important; display: inline-block !important; margin: 0 auto !important; float: none !important; right: auto !important; transform: none !important; padding: 8px 12px; cursor: pointer; border: none; border-radius: 4px;">🔊 Escuchar</button>
                     </div>
+
+                    ${htmlRelacionados} 
 
                     ${htmlReferencias} 
                 </div>
@@ -114,7 +135,7 @@ const publicView = {
         const modal = document.getElementById('modal-termino');
         if (modal) modal.innerHTML = '';
         if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-    }
+            window.speechSynthesis.cancel();
+        }
     }
 };

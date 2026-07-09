@@ -28,7 +28,6 @@ const quitarAcentos = (texto) => {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
-// Aquí quedó integrada la búsqueda difusa y la limpieza de acentos de la entrada
 const ejecutarBusqueda = debounce((texto) => {
     const query = quitarAcentos(texto.toLowerCase().trim());
     
@@ -36,7 +35,6 @@ const ejecutarBusqueda = debounce((texto) => {
         if (publicView.searchResults) publicView.searchResults.innerHTML = "";
         return;
     }
-    
     
     let resultados = [];
     if (fuse) {
@@ -148,6 +146,7 @@ if ('speechSynthesis' in window) {
     window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();
     };
+}
 
 window.cambiarTamanoTexto = (cambio) => {
     const textoEl = document.getElementById('texto-definicion');
@@ -155,7 +154,6 @@ window.cambiarTamanoTexto = (cambio) => {
 
     const estiloActual = window.getComputedStyle(textoEl, null).getPropertyValue('font-size');
     const tamanoActual = parseFloat(estiloActual);
-
     const nuevoTamano = tamanoActual + cambio;
 
     textoEl.style.setProperty('font-size', nuevoTamano + 'px', 'important');
@@ -166,5 +164,14 @@ const normalizar = (texto) => {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 };
 
-}
-
+// Función global que usará la vista para encontrar las referencias automatizadas
+window.obtenerTerminosRelacionados = (textoDefinicion, conceptoActual) => {
+    if (!textoDefinicion || conceptosIndex.length === 0) return [];
+    const textoNormalizado = normalizar(textoDefinicion);
+    
+    return conceptosIndex.filter(item => {
+        if (item.nombre === conceptoActual) return false;
+        const nombreNormalizado = normalizar(item.nombre);
+        return nombreNormalizado.length > 2 && textoNormalizado.includes(nombreNormalizado);
+    });
+};
