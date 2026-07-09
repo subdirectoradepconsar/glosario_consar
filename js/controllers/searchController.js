@@ -1,3 +1,4 @@
+let fuse;
 let conceptosIndex = [];
 let selectedIndex = -1;
 
@@ -8,18 +9,44 @@ db_obtenerTerminos((data) => {
             nombre: data[key].concepto
         }));
         publicView.renderDiccionario(conceptosIndex);
+
+        const opcionesFuse = {
+            keys: ['nombre'],  
+            threshold: 0.4,   
+            ignoreLocation: true, 
+            getFn: (obj, path) => {
+                return quitarAcentos(obj[path]);
+            }
+        };
+
+        fuse = new Fuse(conceptosIndex, opcionesFuse);
     }
 });
 
+const quitarAcentos = (texto) => {
+    if (!texto) return "";
+    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+
+// Aquí quedó integrada la búsqueda difusa y la limpieza de acentos de la entrada
 const ejecutarBusqueda = debounce((texto) => {
-    const query = texto.toLowerCase().trim();
+    const query = quitarAcentos(texto.toLowerCase().trim());
+    
     if (query.length < 1) {
         if (publicView.searchResults) publicView.searchResults.innerHTML = "";
         return;
     }
-    const resultados = conceptosIndex.filter(item =>
-        item.nombre && item.nombre.toLowerCase().includes(query)
-    );
+    
+    
+    let resultados = [];
+    if (fuse) {
+        resultados = fuse.search(query).map(res => res.item);
+    } else {
+        resultados = conceptosIndex.filter(item =>
+            item.nombre && quitarAcentos(item.nombre.toLowerCase()).includes(query)
+        );
+    }
+    
     publicView.mostrarSugerencias(resultados);
 }, 200);
 
@@ -98,8 +125,8 @@ window.toggleLectura = () => {
 
     const voces = synth.getVoices();
     const vozOptima = voces.find(v => v.lang === 'es-MX' && (v.name.includes('Google') || v.name.includes('Premium')))
-                   || voces.find(v => v.lang === 'es-MX')
-                   || voces.find(v => v.lang.startsWith('es'));
+                    || voces.find(v => v.lang === 'es-MX')
+                    || voces.find(v => v.lang.startsWith('es'));
 
     if (vozOptima) {
         utterance.voice = vozOptima;
@@ -126,14 +153,11 @@ window.cambiarTamanoTexto = (cambio) => {
     const textoEl = document.getElementById('texto-definicion');
     if (!textoEl) return;
 
-    // Obtenemos el tamaño actual calculado por el navegador
     const estiloActual = window.getComputedStyle(textoEl, null).getPropertyValue('font-size');
     const tamanoActual = parseFloat(estiloActual);
 
-    // Calculamos el nuevo tamaño
     const nuevoTamano = tamanoActual + cambio;
 
-    // Aplicamos el nuevo tamaño y aseguramos la legibilidad del interlineado
     textoEl.style.setProperty('font-size', nuevoTamano + 'px', 'important');
     textoEl.style.setProperty('line-height', '1.6', 'important');
 };
