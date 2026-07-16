@@ -42,6 +42,27 @@ const publicView = {
                 link.classList.remove('letra-inactiva');
             }
         });
+
+        const btnSubir = document.getElementById('btnGlosarioSubir');
+        const btnBajar = document.getElementById('btnGlosarioBajar');
+
+        if (btnSubir) {
+            btnSubir.onclick = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+        }
+
+        if (btnBajar) {
+            btnBajar.onclick = () => {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                });
+            };
+        }
     },
 
     mostrarSugerencias: (lista) => {
@@ -63,6 +84,7 @@ const publicView = {
             modal = document.createElement('div');
             modal.id = 'modal-termino';
             document.body.appendChild(modal);
+            
         }
 
         let htmlReferencias = "";
@@ -104,12 +126,10 @@ const publicView = {
         }
 
         modal.innerHTML = `
-        <div class="modal-overlay">
-            <div class="detalle-card">
+        <div class="modal-overlay" style="display: flex !important; align-items: center !important; justify-content: center !important;">
+            <div class="detalle-card" style="max-width: 600px !important; width: 90% !important; max-height: 85vh !important; overflow-y: auto !important; padding: 20px !important; box-sizing: border-box !important;">
                 <button class="btn-cerrar" onclick="publicView.cerrarModal()">×</button>
                 <div class="modal-header"><h2>${data.concepto}</h2></div>
-                <hr>
-                <div class="modal-body">
                     
                     <div style="display: flex; justify-content: flex-end; gap: 15px; margin-bottom: 20px;">
                         <button onclick="cambiarTamanoTexto(-2)" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important; padding: 6px 15px !important; cursor: pointer !important; border: 1px solid #666 !important; border-radius: 4px !important; font-weight: bold !important; font-size: 14px !important; background-color: #f8f9fa !important; color: #333 !important;">a -</button>
