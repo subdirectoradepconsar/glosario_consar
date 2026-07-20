@@ -16,6 +16,8 @@
             <img id="gobiernoDeMexico"
                 src="https://www.gob.mx/resources/img/logo_gob_mx.png?pfdrid_c=false&uid=578f241b-8ab9-4d44-a04b-80a5600c7a53"
                 alt="gobierno de méxico">
+
+            
         </a>
 
         <div id="google_translate_element" style="margin-left: auto; padding-right: 20px;"></div>
@@ -41,8 +43,8 @@
                 <div id="search-results" class="search-suggestions"></div>
             </div>
 
-           <section>
-                <!-- AGREGAMOS LA CLASE NOTRANSLATE AQUÍ PARA BLINDAR TODO EL ABECEDARIO -->
+            <section>
+                
                 <ul class="lista_nav notranslate">
                     <li><a href="#A">A</a></li>
                     <li><a href="#B">B</a></li>
@@ -77,20 +79,22 @@
 
         <div id="glossary-container"></div>
 
-       <div style="position: fixed !important; bottom: 20px !important; right: 20px !important; z-index: 9999 !important; display: flex !important; flex-direction: column !important; gap: 10px !important;">
+        <div style="position: fixed !important; bottom: 20px !important; right: 20px !important; z-index: 9999 !important; display: flex !important; flex-direction: column !important; gap: 10px !important;">
             
+          
             <button id="btnGlosarioSubir" 
                     onmouseover="this.style.backgroundColor='#91714a'; this.style.transform='scale(1.05)';" 
                     onmouseout="this.style.backgroundColor='#b38e5f'; this.style.transform='scale(1)';" 
-                    style="position: static !important; display: block !important; margin: 0 !important; width: 95px !important; height: 40px !important; background-color: #b38e5f !important; color: #FFFFFF !important; border: none !important; border-radius: 4px !important; font-weight: bold !important; cursor: pointer !important; font-size: 14px !important; text-align: center !important; transition: all 0.2s ease !important;">
-                ↑ Subir
+                    style="position: static !important; display: none !important; margin: 0 !important; width: 95px !important; height: 40px !important; background-color: #b38e5f !important; color: #FFFFFF !important; border: none !important; border-radius: 4px !important; font-weight: bold !important; cursor: pointer !important; font-size: 14px !important; text-align: center !important; transition: all 0.2s ease !important;">
+                <span class="notranslate" style="display: inline-block; margin-right: 2px;">↑</span> Subir
             </button>
             
+        
             <button id="btnGlosarioBajar" 
                     onmouseover="this.style.backgroundColor='#91714a'; this.style.transform='scale(1.05)';" 
                     onmouseout="this.style.backgroundColor='#b38e5f'; this.style.transform='scale(1)';" 
                     style="position: static !important; display: block !important; margin: 0 !important; width: 95px !important; height: 40px !important; background-color: #b38e5f !important; color: #FFFFFF !important; border: none !important; border-radius: 4px !important; font-weight: bold !important; cursor: pointer !important; font-size: 14px !important; text-align: center !important; transition: all 0.2s ease !important;">
-                ↓ Bajar
+                <span class="notranslate" style="display: inline-block; margin-right: 2px;">↓</span> Bajar
             </button>
             
         </div>
@@ -127,7 +131,59 @@
     <script src="js/views/publicView.js"></script>
     <script src="js/views/components/btn_subir.js"></script>
     <script src="js/controllers/searchController.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnSubir = document.getElementById('btnGlosarioSubir');
+            const btnBajar = document.getElementById('btnGlosarioBajar');
+            let ultimaPosicionScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            window.addEventListener('scroll', () => {
+                const posicionActual = window.pageYOffset || document.documentElement.scrollTop;
+                const limiteInferior = document.documentElement.scrollHeight - window.innerHeight - 60;
+
+                // Si estás mero arriba, oculta "Subir" y muestra "Bajar"
+                if (posicionActual <= 80) {
+                    if (btnSubir) btnSubir.style.setProperty('display', 'none', 'important');
+                    if (btnBajar) btnBajar.style.setProperty('display', 'block', 'important');
+                    ultimaPosicionScroll = posicionActual;
+                    return;
+                }
+
+                // Si llegaste al final de la página (footer), oculta "Bajar" y muestra "Subir"
+                if (posicionActual >= limiteInferior) {
+                    if (btnSubir) btnSubir.style.setProperty('display', 'block', 'important');
+                    if (btnBajar) btnBajar.style.setProperty('display', 'none', 'important');
+                    ultimaPosicionScroll = posicionActual;
+                    return;
+                }
+
+                // Detección de dirección
+                if (posicionActual > ultimaPosicionScroll) {
+                    // Haciendo Scroll hacia ABAJO -> Mostrar Bajar, Ocultar Subir
+                    if (btnSubir) btnSubir.style.setProperty('display', 'none', 'important');
+                    if (btnBajar) btnBajar.style.setProperty('display', 'block', 'important');
+                } else {
+                    // Haciendo Scroll hacia ARRIBA -> Mostrar Subir, Ocultar Bajar
+                    if (btnSubir) btnSubir.style.setProperty('display', 'block', 'important');
+                    if (btnBajar) btnBajar.style.setProperty('display', 'none', 'important');
+                }
+
+                ultimaPosicionScroll = posicionActual <= 0 ? 0 : posicionActual;
+            });
+        });
     </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es,fr,de,it,pt,zh-CN,ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
