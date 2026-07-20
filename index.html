@@ -17,6 +17,9 @@
                 src="https://www.gob.mx/resources/img/logo_gob_mx.png?pfdrid_c=false&uid=578f241b-8ab9-4d44-a04b-80a5600c7a53"
                 alt="gobierno de méxico">
         </a>
+
+        <div id="google_translate_element" style="margin-left: auto; padding-right: 20px;"></div>
+
     </header>
     <section>
         <div>
@@ -38,8 +41,9 @@
                 <div id="search-results" class="search-suggestions"></div>
             </div>
 
-            <section>
-                <ul class="lista_nav">
+           <section>
+                <!-- AGREGAMOS LA CLASE NOTRANSLATE AQUÍ PARA BLINDAR TODO EL ABECEDARIO -->
+                <ul class="lista_nav notranslate">
                     <li><a href="#A">A</a></li>
                     <li><a href="#B">B</a></li>
                     <li><a href="#C">C</a></li>
@@ -123,6 +127,7 @@
     <script src="js/views/publicView.js"></script>
     <script src="js/views/components/btn_subir.js"></script>
     <script src="js/controllers/searchController.js"></script>
+    </script>
 </body>
 
 </html>

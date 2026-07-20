@@ -3,7 +3,6 @@ let editandoId = null;
 firebase.auth().onAuthStateChanged((user) => {
     adminView.toggleAuthScreens(user);
     if (user) {
-        
         db_obtenerTerminos((datos) => {
             adminView.renderizarTarjetas(datos);
         });
@@ -61,13 +60,20 @@ adminView.formulario?.addEventListener('submit', async (e) => {
     btnGuardar.innerText = "Procesando...";
 
     try {
-        const datos = adminView.getFormData();
+        const datosFormulario = adminView.getFormData();
+
+        const datosValidados = {
+            concepto: datosFormulario.concepto || datosFormulario.nombre || document.getElementById('concepto').value,
+            nombre: datosFormulario.concepto || datosFormulario.nombre || document.getElementById('concepto').value,
+            definicion: datosFormulario.definicion || document.getElementById('definicion').value,
+            referencias: Array.isArray(datosFormulario.referencias) ? datosFormulario.referencias : []
+        };
         
         if (editandoId) {
-            await db_actualizarTermino(editandoId, datos);
+            await db_actualizarTermino(editandoId, datosValidados);
             adminView.mostrarToast("Término actualizado correctamente.");
         } else {
-            await db_guardarTermino(datos);
+            await db_guardarTermino(datosValidados);
             adminView.mostrarToast("Término guardado con éxito.");
         }
         
@@ -81,20 +87,63 @@ adminView.formulario?.addEventListener('submit', async (e) => {
     }
 });
 
-window.prepararEdicion = (id, concepto, definicion, refsString) => {
-    
+window.prepararEdicion = (id, conceptoEnc, definicionEnc, refsString) => {
     adminView.limpiarFormulario();
 
-    document.getElementById('concepto').value = concepto;
-    document.getElementById('definicion').value = definicion;
-    
+    let conceptoLimpio = "";
+    let definicionLimpia = "";
+    let referenciasFinales = [];
+
+    // 1. Decodificamos de forma segura el concepto y la definición
     try {
-        const referencias = JSON.parse(decodeURIComponent(refsString));
-        if (Array.isArray(referencias)) {
-            referencias.forEach(ref => window.agregarCampoReferencia(ref.nombre, ref.url));
-        }
+        conceptoLimpio = decodeURIComponent(conceptoEnc);
     } catch (e) {
-        console.error("Error al procesar referencias en edición:", e);
+        conceptoLimpio = conceptoEnc || "";
+    }
+
+    try {
+        definicionLimpia = decodeURIComponent(definicionEnc);
+    } catch (e) {
+        definicionLimpia = definicionEnc || "";
+    }
+
+    // 2. Comprobación secundaria vía dataset por si se prefiere leer la tarjeta directamente
+    const tarjetaReal = document.querySelector(`[data-id="${id}"]`) || document.getElementById(`tarjeta-${id}`);
+    if (tarjetaReal) {
+        conceptoLimpio = tarjetaReal.dataset.concepto || tarjetaReal.dataset.nombre || conceptoLimpio;
+        definicionLimpia = tarjetaReal.dataset.definicion || definicionLimpia;
+        try {
+            const dataRefs = tarjetaReal.dataset.referencias;
+            if (dataRefs) referenciasFinales = JSON.parse(dataRefs);
+        } catch(err) {
+            console.log("Usando fallback de referencias");
+        }
+    }
+
+    // 3. Procesamiento seguro de las referencias
+    if (referenciasFinales.length === 0 && refsString) {
+        try {
+            referenciasFinales = JSON.parse(decodeURIComponent(refsString));
+        } catch (e) {
+            try {
+                referenciasFinales = JSON.parse(refsString);
+            } catch(err2) {
+                console.error("Error al procesar referencias:", err2);
+            }
+        }
+    }
+
+    // 4. Inyección limpia de los textos en el formulario (conservando saltos de línea)
+    document.getElementById('concepto').value = conceptoLimpio;
+    document.getElementById('definicion').value = definicionLimpia;
+    
+    // 5. Carga de los campos de referencias
+    if (Array.isArray(referenciasFinales)) {
+        referenciasFinales.forEach(ref => {
+            if (ref && ref.nombre && ref.url) {
+                window.agregarCampoReferencia(ref.nombre, ref.url);
+            }
+        });
     }
 
     const btnGuardar = document.getElementById('btn-guardar');

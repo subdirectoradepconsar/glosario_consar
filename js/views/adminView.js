@@ -77,7 +77,7 @@ const adminView = {
                     <div class="tarjeta">
                         <h3>${item.concepto}</h3>
                         <p>${item.definicion}</p>
-                        <button type="button" onclick="prepararEdicion('${id}','${item.concepto.replace(/'/g, "\\'")}','${item.definicion.replace(/'/g, "\\'")}', '${refsString}')">Editar</button>
+                        <button type="button" onclick="prepararEdicion('${id}', '${encodeURIComponent(item.concepto || item.nombre || '')}', '${encodeURIComponent(item.definicion || '')}', '${refsString}')">Editar</button>
                         <button type="button" onclick="eliminar('${id}')">Eliminar</button>
                     </div>
                 `;
